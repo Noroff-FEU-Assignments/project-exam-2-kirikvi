@@ -3,3 +3,12 @@
     justify-content: flex-start;
     align-items: center;
 }
+
+.postHeader img {
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+    background-color: #000;
+    border-radius: 100px;
+    margin-right: 20px;
+}

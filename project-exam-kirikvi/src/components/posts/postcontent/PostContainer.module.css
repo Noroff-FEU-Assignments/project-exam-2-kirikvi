@@ -4,3 +4,7 @@
     color: #161616;
 }
 
+.postContainer img {
+    border-radius: 20px;
+}
+

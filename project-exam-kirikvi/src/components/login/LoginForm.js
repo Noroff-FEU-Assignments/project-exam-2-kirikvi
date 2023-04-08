@@ -7,6 +7,9 @@ import axios from "axios";
 import FormError from "../common/FormError";
 import { API_BASE_URL, LOGIN_PATH } from "../../constants/api";
 import AuthContext from "../../context/AuthContext";
+import Button from "../forms/Button";
+import Input from "../forms/Input";
+import Form from "../forms/Form";
 
 const url = API_BASE_URL + LOGIN_PATH;
 
@@ -48,7 +51,7 @@ export default function LoginForm() {
 
     return (
         <>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <Form onSubmit={handleSubmit(onSubmit)}>
 
                 {loginError && <FormError>{loginError}</FormError>}
 
@@ -56,19 +59,19 @@ export default function LoginForm() {
                     
                     <div>
                         <label>Email</label>
-                        <input {...register("email")} />
+                        <Input {...register("email")} />
                         {errors.email && <FormError>{errors.email.message}</FormError>}
                     </div>
 
                     <div>
                         <label>Password</label>
-                        <input type="password" {...register("password")} />
+                        <Input type="password" {...register("password")} />
                         {errors.password && <FormError>{errors.password.message}</FormError>}
                     </div>
 
-                    <button>{submitting ? "Logging in..." : "Login"}</button>    
+                    <Button>{submitting ? "Logging in..." : "Login"}</Button>    
                 </fieldset>    
-            </form>
+            </Form>
         </>
     )
 }
