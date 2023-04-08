@@ -7,7 +7,9 @@ import { useNavigate } from "react-router-dom";
 import FormError from "../common/FormError";
 import { API_BASE_URL, REGISTER_PATH} from "../../constants/api";
 import AuthContext from "../../context/AuthContext";
-//import Button from "../forms/Button";
+import Button from "../forms/Button";
+import Form from "../forms/Form";
+import Input from "../forms/Input";
 
 const url = API_BASE_URL + REGISTER_PATH;
 
@@ -46,32 +48,32 @@ export default function RegisterForm() {
 
     return (
         <>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <Form onSubmit={handleSubmit(onSubmit)}>
 
                 {registerError && <FormError>{registerError}</FormError>}
                 
                 <fieldset disabled={submitting}>
                     <div>
                         <label>Username</label>
-                        <input type="text" className="form-input border-b-indigo-500" {...register("name")} />
+                        <Input type="text" className="form-input border-b-indigo-500" {...register("name")} />
                         {errors.name && <FormError>{errors.name.message}</FormError>}
                     </div>
 
                     <div>
                         <label>E-mail</label>
-                        <input type="email" {...register("email")} />
+                        <Input type="email" {...register("email")} />
                         {errors.email && <FormError>{errors.email.message}</FormError>}
                     </div>
 
                     <div>
                         <label>Password</label>
-                        <input type="password" {...register("password")} />
+                        <Input type="password" {...register("password")} />
                         {errors.password && <FormError>{errors.password.message}</FormError>}
                     </div>
 
-                    <button>{submitting ? "Registers..." : "Register"}</button>  
+                    <Button>{submitting ? "Registers..." : "Register"}</Button>  
                 </fieldset>    
-            </form>
+            </Form>
         </>
     );
 }

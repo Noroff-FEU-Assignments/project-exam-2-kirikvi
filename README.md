@@ -1,89 +1,45 @@
-# Project Exam 2
-## Goal
-To take the skills learned over the last two years and take on an extensive project where the finished product should reflect the candidate's general development capabilities, in addition to visual and technical skills.
+# projectExam
+ 
+## Setting up and running the project
 
-## Brief
-An existing Social Media company has approached you to create a brand new front end for their application. While they have a list of required features, the design and user experience has not been specified. Working with the official API documentation, plan, design and build a modern front end social media application.
+## Special instructions
 
-## Requirements
+## Report
+### Project planning and management
+I started out by making a Kanban board using trello.com. This gave me a detailed view of what needs to be done. After that I made a Gantt chart using clickup.com to see how much time I had on each task.
+### Design
+Since I don't know what the target group is, I wanted to keep the design minimalistic, clean and "fit for all". I chose the colours because "colour psychology" blue, purple, white, yellow.
 
-> All admin functionality is managed by an existing application. This project only covers the front-end application for the API.
+I don't know the name of the company, and did not want to spend too much time coming up with a name and logo, so I went with "socialize" and created a simple logo and favicon using the font "omnes" that I chose for the whole design on the website.
 
-## API
+I made a style guide and a prototype for mobile screens.
 
-The API you are using for this project can be found under Social EndPoints in the [Noroff API documentation](https://noroff-api-docs.netlify.app/).
+### Technical
+The technical part is still where I am struggling the most. I prefer to not use frameworks and do everything "from scratch", so I spent some time figuring out how to use react bootstrap for both content, functionality and styling. After encountering some problems with react bootstrap, I decided to only focus on getting all the content before trying to style anything.
 
-### Resources
+#### API
+I followed the Noroff lessons and Noroff API on how to get the access token when registering and logging in, and it was a huge relief when it finally worked. After that I spent a lot of time creating the different files and pages to get all the data and content.
 
-[API Guide](https://noroff-api-docs.netlify.app/social-endpoints/authentication)
-[API Documentation](https://nf-api.onrender.com/docs)
+After spending a whole day styling the project, something went wrong. I am not sure why, but the local storage cleared itself and I lost access to the API content. I was still able to use the login form to get the correct response wich would give me access to the social endpoints, but it would not save it in Local storage. I did rewatch the lessons on how to save it in local storage with the useLocalStorage hook, but I could not find a reason why my code was not working anymore. I asked my fellow students on Discord if anyone was experiencing the same. 
 
-### User Stories
+I did not get any answers from anyone, so I decided to start all over again while trying to find the problem.
 
-The client has specified the following requirements in the form of *User Stories*:
-1. A user with a `stud.noroff.no` email may register
-2. A registered user may login
-3. A registered user may update their avatar and banner
-4. A registered user may logout
-5. A registered user may view a list of `Posts`
-6. A registered user may view a list of `Profiles`
-7. A registered user may view a single `Post` by `id`
-8. A registered user may view a single `Profile` by `name`
-9. A registered user may create a `Post`
-10. A registered user may update a `Post` they own
-11. A registered user may delete a `Post` they own
-12. A registered user may create a `Comment` on any `Post`
-13. A registered user may `react` to any `Post` with an emoji
-14. A registered user may `follow` and `unfollow` another `Profile`
+It was a good idea, as I ended up with tidier code and got everything up and running again. I believe the problem was with the useLocalStorage hook and my placement of the <Authprovider> in the App.js file.
 
-### Technical Restrictions
+#### Create, update and delete post
+At first I wanted to include the tags array when creating a new post, but I could not figure out how to write the code to get the correct response. It did not work when trying to publish the post, so I ended up excluding the tags from the form and finally the post was created. I decided to just leave out the tags from there, and if I got time later I would look back into it, but as its not required I had to prioritize the required tasks first.
 
-The company CTO has set the following technical restrictions:
-1. Must use an approved `JavaScript Framework`
-2. Must use an approved `CSS Framework`
-3. Must be hosted on an approved `Static Host`
-4. Must use an approved `Design Application`
-5. Must use an approved `Planning Application`
+I followed the Noroff lesson on how to update a post, and I successfully was able to update the post I created. 
 
-### Required Links
+I noticed that every time I created or updated a post, I got signed out and lost access to the content. I had to login again after every time.
 
-The Product Owner has requested links to the following:
-1. A Gantt chart for project timing
-2. A design prototype
-3. A style guide
-4. A kanban project board
-5. A repository link
-6. A hosted application demo link
+#### Follow
 
-## Approved Resources
-This list covers libraries and services that have been vetted by the company and approved for use.
+#### Reaction (emoji)
 
-### JavaScript Frameworks
-- React (>16)
+#### CSS Modules
+I decided to go for CSS Modules for styling. I have not used CSS Modules before, so I would like some feedback on where to improve.
 
-### CSS Frameworks
-- Bootstrap (>5)
-- Tailwind (>3)
-- MUI (>5)
-- Styled Components
-- CSS Modules
 
-### Hosting Services
-- GitHub Pages
-- Netlify
-
-### Design Applications
-- Adobe XD
-- Figma
-- Sketch
-
-### Planning Applications
-- Trello
-- GitHub Projects
-
-## Delivery
-Include the required links in the Moodle delivery window using [this template format](delivery-template.html).
-
-All final changes must be merged into the default branch `main` or `master`. Other branches will not be checked.
-
-Ensure that the `readme.md` file describes your project thoroughly, including how to setup and run the project locally and any special instructions for testers.
+## References
+Noroff Lessons
