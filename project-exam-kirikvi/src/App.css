@@ -7,6 +7,10 @@ html {
   background-color: #fefefe;
 }
 
+h1 {
+  display: none;
+}
+
 /*Temporary styling to make it easier to see the page content*/
 nav {
   display: flex;

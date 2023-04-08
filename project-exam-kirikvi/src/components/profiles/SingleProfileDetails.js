@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { API_BASE_URL, PROFILES_PATH } from "../../constants/api";
 import useAxios from "../../hooks/useAxios";
-//import PostsByProfile from "../posts/PostsByProfile";
 import Banner from "./profilecontent/media/Banner";
 import ProfileContainer from "./profilecontent/ProfileContainer";
 import Avatar from "./profilecontent/media/Avatar";

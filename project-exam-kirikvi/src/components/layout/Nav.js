@@ -8,6 +8,7 @@ import profile from "../../icons/profile.png";
 import search from "../../icons/search.png";
 import logo from "../../logo/SocializeLogo.png";
 
+
 function Nav() {
     const [auth, setAuth] = useContext(AuthContext);
 

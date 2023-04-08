@@ -42,6 +42,7 @@ export default function UserProfileDetails() {
     return (
         <>
             <ProfileContainer>
+                
                 <Banner>
                     <img src={profile.banner}></img>
                 </Banner>
@@ -59,6 +60,8 @@ export default function UserProfileDetails() {
                 </CountContainer>
                 <FollowButton>Follow</FollowButton>
             </ProfileContainer>
+
+            <hr></hr>
 
         </>
     );

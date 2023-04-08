@@ -30,12 +30,12 @@ function App() {
 
           <div>
             <Routes>
-              <Route exact path="/" element={<PostsPage />} />
-              <Route exact path="/postsbyfollowing" element={<PostsByFollowingPage />} />
-              <Route exact path="/posts/:id" element={<PostPage />} />
-              <Route exact path="/userprofile" element={<UserProfilePage />} />
-              <Route exact path="/profiles" element={<ProfilesPage />} />
-              <Route exact path="/profiles/:name" element={<SingleProfileDetails />} />
+              <Route path="/" element={<PostsPage />} />
+              <Route path="/postsbyfollowing" element={<PostsByFollowingPage />} />
+              <Route path="/posts/:id" element={<PostPage />} />
+              <Route path="/userprofile" element={<UserProfilePage />} />
+              <Route path="/profiles" element={<ProfilesPage />} />
+              <Route path="/profiles/:name" element={<SingleProfileDetails />} />
               <Route path="/register" element={<RegisterPage />} />
               <Route exact path="/login" element={<LoginPage />} />
             </Routes>
