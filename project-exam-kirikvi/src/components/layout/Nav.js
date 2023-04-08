@@ -29,7 +29,10 @@ function Nav() {
                     <button onClick={logout}>Log out</button>
                 </>
              ) : (
-                <NavLink to="/login">Login </NavLink>
+                <>
+                    <NavLink to="/register">Register </NavLink>
+                    <NavLink to="/login">Login </NavLink>
+                </>  
              )}
         </nav>
     );

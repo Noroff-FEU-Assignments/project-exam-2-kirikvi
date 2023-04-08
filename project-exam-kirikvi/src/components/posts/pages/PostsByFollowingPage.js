@@ -1,9 +1,12 @@
 import Heading from "../../layout/Heading";
 //import CreatePost from "./postactions/CreatePost";
-//import PostsListByFollowing from "./PostListByFollowing";
+import PostsByFollowing from "../PostsByFollowing";
 
 export default function PostsByFollowingPage() {
     return (
-        <Heading content="Friend's posts"/>
+        <>
+            <Heading content="Friend's posts"/>
+            <PostsByFollowing />
+        </>
     );
 }

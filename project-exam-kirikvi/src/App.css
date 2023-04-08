@@ -4,4 +4,15 @@
 
 html {
   font-family: "omnes-pro", sans-serif;
+  background-color: #fefefe;
+}
+
+/*Temporary styling to make it easier to see the page content*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav img {
+  max-height: 40px;
 }

@@ -1,0 +1,5 @@
+.countContainer {
+    display: flex;
+    justify-content: space-around;
+    font-weight: 600;
+}
