@@ -4,6 +4,6 @@ import Heading from "../../layout/Heading";
 
 export default function PostsByFollowingPage() {
     return (
-        <Heading title="Friend's posts"/>
+        <Heading content="Friend's posts"/>
     );
 }

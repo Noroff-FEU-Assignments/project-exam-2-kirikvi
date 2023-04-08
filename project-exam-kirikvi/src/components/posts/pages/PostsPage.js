@@ -3,6 +3,6 @@ import Heading from "../../layout/Heading";//import PostsList from "./PostsList"
 
 export default function PostsPage() {
     return (
-        <Heading title="List of all posts"/>
+        <Heading content="List of all posts"/>
     );
 }
