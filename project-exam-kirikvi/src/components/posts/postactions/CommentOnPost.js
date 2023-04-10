@@ -3,12 +3,12 @@ import { useForm } from "react-hook-form";
 import { useParams, useNavigate } from "react-router-dom";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import ValidationError from "../../common/FormError";
+import FormError from "../../common/FormError";
 import { API_BASE_URL, POSTS_PATH } from "../../../constants/api";
 import useAxios from "../../../hooks/useAxios";
 
 const schema = yup.object().shape({
-    body: yup.string().required("A body is required"),
+    body: yup.string().required("Please enter the comment you would like to post"),
 });
 
 export default function CommentOnPost() {
@@ -59,20 +59,12 @@ export default function CommentOnPost() {
         setCommentError(null);
         setCommented(false);
 
-        const commentContainer = document.querySelector(".commentContainer");
-
-        commentContainer.innerHTML = "";
-
         console.log(data);
         
         try{
             const response = await http.put(commentURL, data);
             console.log("response", response.data);
             setCommented(true);
-
-            commentContainer.innerHTML = 
-                `<div>${post.response}</div>`;
-
             //refresh the page after commenting the post
             navigate(0);
         } catch (error) {
@@ -88,22 +80,22 @@ export default function CommentOnPost() {
     if (fetchError) return <div>Error loading post...</div>;
 
     return (
-        <>
-            <div className = "commentContainer"></div>    
-          
-            <form onSubmit={handleSubmit(onSubmit)}>
+        <>          
+            <form onSubmit={handleSubmit(onSubmit)}> 
 
                 {commented && <div>The post was commented</div>}
 
-                {commentError && <ValidationError>{commentError}</ValidationError>}
+                {commentError && <FormError>{commentError}</FormError>}
                
                 <fieldset disabled={commented}>
                     <div>
                         <textarea name="body" type="text" {...register("body")} />
+                        {errors.body && <FormError>{errors.body.message}</FormError>}
                     </div>
 
-                    <button>{commented ? "Commenting..." : "Post comment"}</button>  
+                    <button>{commented ? "Posting..." : "Post comment"}</button>  
                 </fieldset>    
+
             </form>
         </>
     );

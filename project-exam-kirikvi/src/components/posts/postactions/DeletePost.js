@@ -22,6 +22,7 @@ export default function DeletePostButton({ id }) {
                 navigate("/");
             } catch (error) {
                 setError(error);
+                alert("You do not have permission to delete this post");
             }
         }
     }
