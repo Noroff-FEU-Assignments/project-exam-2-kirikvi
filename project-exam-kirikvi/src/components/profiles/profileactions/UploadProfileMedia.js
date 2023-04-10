@@ -81,13 +81,13 @@ export default function UploadProfileMedia() {
 
             <fieldset disabled={uploadingMedia}>
                 <div>
-                    <img src={media.avatar}></img>
+                    <img src={media.avatar} alt={media.avatar}></img>
                     <input name="avatar" placeholder="Avatar url" ref={register} />
                     {errors.avatar && <FormError>{errors.avatar.message}</FormError>}
                 </div>
 
                 <div>
-                    <img src={media.banner}></img>
+                    <img src={media.banner} alt={media.banner}></img>
                     <input name="banner" placeholder="Banner url" ref={register} />
                 </div>
 

@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { API_BASE_URL, POSTS_PATH } from "../../constants/api";
 import useAxios from "../../hooks/useAxios";
 import UpdatePost from "./postactions/UpdatePost";
-import ReactButton from "./postactions/ReactToPost";
+//import ReactButton from "./postactions/ReactToPost";
 import CommentOnPost from "./postactions/CommentOnPost";
 import PostContainer from "./postcontent/PostContainer";
 import PostHeader from "./postcontent/PostHeader";
@@ -52,7 +52,7 @@ export default function SinglePostDetails() {
             <PostContainer>
                 <hr></hr>
                 <PostHeader>
-                    <img className="avatar" src={post.author.avatar}></img>    
+                    <img className="avatar" src={post.author.avatar} alt="avatar"></img>    
 
                     <div>
                         <h2>{post.author.name}</h2>
@@ -61,7 +61,7 @@ export default function SinglePostDetails() {
                 </PostHeader>
                 <h3>{post.title}</h3>
                 <p>{post.body}</p>
-                <img src={post.media}></img>
+                <img src={post.media} alt={post.media}></img>
                 
                 <hr></hr>
                 <ReactToPost />

@@ -7,6 +7,7 @@ import FormError from "../../common/FormError";
 import { API_BASE_URL, POSTS_PATH } from "../../../constants/api";
 import useAxios from "../../../hooks/useAxios";
 import Button from "../../forms/Button";
+//import Input from "../../forms/Input";
 
 const schema = yup.object().shape({
     title: yup.string().required("A title is required"),
@@ -58,21 +59,21 @@ export default function CreatePost() {
                 <fieldset disabled={submitting}>
                     <div>
                         <label>Title</label>
-                        <input type="text" className="bg-light" {...register("title")} />
+                        <input type="text" {...register("title")} />
                         {errors.title && <FormError>{errors.title.message}</FormError>}
                     </div>
 
                     <div>
                         <label>Body</label>
-                        <textarea type="text" className="bg-light" {...register("body")} />
+                        <textarea type="text" {...register("body")} />
                     </div>
 
                     <div>
                         <label>Add media url</label>
-                        <input type="text" className="bg-light" {...register("media")} />
+                        <input type="text" {...register("media")} />
                     </div>
 
-                    <Button className="bg-dark p-2 text-white rounded">{submitting ? "Publishing..." : "Publish"}</Button>    
+                    <Button>{submitting ? "Publishing..." : "Publish"}</Button>    
                 </fieldset>    
             </form>
         </>

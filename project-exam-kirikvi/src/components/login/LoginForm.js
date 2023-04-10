@@ -7,6 +7,7 @@ import axios from "axios";
 import FormError from "../common/FormError";
 import { API_BASE_URL, LOGIN_PATH } from "../../constants/api";
 import AuthContext from "../../context/AuthContext";
+import Button from "../forms/Button";
 
 const url = API_BASE_URL + LOGIN_PATH;
 
@@ -66,7 +67,7 @@ export default function LoginForm() {
                         {errors.password && <FormError>{errors.password.message}</FormError>}
                     </div>
 
-                    <button>{submitting ? "Logging in..." : "Login"}</button>    
+                    <Button>{submitting ? "Logging in..." : "Login"}</Button>    
                 </fieldset>    
             </form>
         </>

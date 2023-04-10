@@ -37,8 +37,17 @@ export default function PostsByFollowing() {
     return (
         <div>
             {posts.map(function (post) {
-               const { id, title, media, created, _author } = post;
-               return <PostItem key={id} id={id} created={created} author={_author} title={title} media={media}/>;
+               const 
+                    { id, 
+                    title, 
+                    body, 
+                    media, 
+                    created, 
+                    author, 
+                    comments,
+                    reactions,
+                    updated } = post;
+               return <PostItem key={id} id={id} comments={comments} reactions={reactions} body={body} created={created} author={author} title={title} media={media} updated={updated}/>;
             })}
         </div>
     );

@@ -11,21 +11,25 @@ export default function PostItem({ id, title, media, created, author, body, comm
     }
 
     return (
-        <NavLink to={`/posts/${id}`}>
+        <>
             <PostContainer>
                 <hr></hr>
+                <NavLink to={`/profiles/${author.name}`}>
                 <PostHeader>
-                    <img className="avatar" src={author.avatar}></img>    
+                    <img className="avatar" src={author.avatar} alt="avatar"></img>    
 
                     <div>
                         <h2>{author.name}</h2>
                         <small>{created}</small>
                     </div>   
                 </PostHeader>
-                <h3>{title}</h3>
-                <p>{body}</p>
-                <img src={media}></img>
-                
+                </NavLink>
+
+                <NavLink to={`/posts/${id}`}>
+                    <h3>{title}</h3>
+                    <p>{body}</p>
+                    <img src={media} alt={media}></img>
+                </NavLink>
                 <hr></hr>
                 <ReactToPost />
                 <hr></hr>
@@ -33,8 +37,8 @@ export default function PostItem({ id, title, media, created, author, body, comm
                 <p>{reactions.length} reactions</p>
                 <p>{comments.body}</p>
             </PostContainer>
-            
-        </NavLink>
+        </>    
+        
     );
 
 }

@@ -8,8 +8,8 @@ import FormError from "../common/FormError";
 import { API_BASE_URL, REGISTER_PATH} from "../../constants/api";
 import AuthContext from "../../context/AuthContext";
 import Button from "../forms/Button";
-import Form from "../forms/Form";
-import Input from "../forms/Input";
+//import Form from "../forms/Form";
+//import Input from "../forms/Input";
 
 const url = API_BASE_URL + REGISTER_PATH;
 

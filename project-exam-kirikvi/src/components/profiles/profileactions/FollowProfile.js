@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import useAxios from "../../../hooks/useAxios";
 import { API_BASE_URL, PROFILES_PATH } from "../../../constants/api";
+//import FollowButton from "../profilecontent/FollowButton";
 
 export default function FollowProfile() {
     const [error, setError] = useState(null);

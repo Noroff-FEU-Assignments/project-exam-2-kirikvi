@@ -1,27 +1,33 @@
 import { useState } from "react";
-import PropTypes from "prop-types";
+import { useParams } from "react-router-dom";
 import useAxios from "../../../hooks/useAxios";
 import { API_BASE_URL, POSTS_PATH } from "../../../constants/api";
-import ReactButton from "../postcontent/ReactButton";
 
-export default function ReactToPost({ id }) {
+export default function ReactToPost() {
     const [error, setError] = useState(null);
 
     const http = useAxios();
 
-    const postURL = API_BASE_URL + POSTS_PATH + "/" + id + "/react/👍";
+    const { id } = useParams();
+
+    //const navigate = useNavigate();
+
+    const url = API_BASE_URL + POSTS_PATH + "/" + id;
+    const reactURL = url + "/react/👍";
+
+    console.log(reactURL);
     
-    async function handleReaction() {
-        try {
-            await http.put(postURL);
-        } catch (error) {
-            setError(error);
-        }
+    async function handleLike() {
+            try {
+                await http.put(reactURL);
+            } catch (error) {
+                setError(error);
+            }
     }
 
     return (
-        <ReactButton type="button" onClick={handleReaction}>
-            {error ? "Error" : "React"}
-        </ReactButton>
+        <button type="button" onClick={handleLike}>
+            {error ? "Error" : "👍"}
+        </button>
     );
 }
