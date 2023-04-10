@@ -1,13 +1,11 @@
 import { useState, useEffect } from "react";
 import { API_BASE_URL, PROFILES_PATH } from "../../constants/api";
 import useAxios from "../../hooks/useAxios";
-//import PostsByProfile from "../posts/PostsByProfile";
 import Banner from "./profilecontent/media/Banner";
 import ProfileContainer from "./profilecontent/ProfileContainer";
 import Avatar from "./profilecontent/media/Avatar";
 import CountContainer from "./profilecontent/CountContainer";
 import FollowButton from "./profilecontent/FollowButton";
-import UploadProfileMedia from "./profileactions/UploadProfileMedia";
 
 export default function UserProfileDetails() {
     const [profile, setProfile] = useState([]);
@@ -16,12 +14,12 @@ export default function UserProfileDetails() {
 
     const http = useAxios();
     const profilesURL = API_BASE_URL + PROFILES_PATH + "/kiri_kvistnes" + "?_following=true&_followers=true&_posts=true"; 
-    
+
     useEffect(function () {
         async function getProfile() {
             try {
                 const response = await http.get(profilesURL);
-                console.log("response", response.data);
+                //console.log("response", response.data);
                 setProfile(response.data);
             } catch (error) {
                 setError(error.toString());
@@ -43,8 +41,6 @@ export default function UserProfileDetails() {
     return (
         <>
             <ProfileContainer>
-
-                <UploadProfileMedia />
     
                 <Banner>
                     <img src={profile.banner}></img>
@@ -63,7 +59,6 @@ export default function UserProfileDetails() {
                 </CountContainer>
                 <FollowButton>Follow</FollowButton>
             </ProfileContainer>
-
             <hr></hr>
 
         </>

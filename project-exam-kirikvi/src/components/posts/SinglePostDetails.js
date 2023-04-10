@@ -3,9 +3,11 @@ import { useParams, useNavigate } from "react-router-dom";
 import { API_BASE_URL, POSTS_PATH } from "../../constants/api";
 import useAxios from "../../hooks/useAxios";
 import UpdatePost from "./postactions/UpdatePost";
-import Heading from "../layout/Heading";
 import ReactButton from "./postactions/ReactToPost";
 import CommentOnPost from "./postactions/CommentOnPost";
+import PostContainer from "./postcontent/PostContainer";
+import PostHeader from "./postcontent/PostHeader";
+import ReactToPost from "./postactions/ReactToPost";
 
 export default function SinglePostDetails() {
     const [post, setPost] = useState([]);
@@ -47,13 +49,27 @@ export default function SinglePostDetails() {
 
     return (
         <div>
-            <p>{post.author.name}</p>
-            <Heading title={post.title}/>
-            <p>{post.body}</p>
-            <img src={post.media}></img>
-            <ReactButton />
-            <p>{post.reactions.length}</p>
-            <p>{post.comments}</p>
+            <PostContainer>
+                <hr></hr>
+                <PostHeader>
+                    <img className="avatar" src={post.author.avatar}></img>    
+
+                    <div>
+                        <h2>{post.author.name}</h2>
+                        <small>{post.created}</small>
+                    </div>   
+                </PostHeader>
+                <h3>{post.title}</h3>
+                <p>{post.body}</p>
+                <img src={post.media}></img>
+                
+                <hr></hr>
+                <ReactToPost />
+                <hr></hr>
+                
+                <p>{post.reactions.length} reactions</p>
+                <p>{post.comments.body}</p>
+            </PostContainer>
 
             <hr></hr>
 

@@ -15,7 +15,7 @@ export default function AllProfiles() {
         async function getProfiles() {
             try {
                 const response = await http.get(profilesURL);
-                console.log("response", response.data);
+                //console.log("response", response.data);
                 setProfiles(response.data);
             } catch (error) {
                 setError(error.toString());

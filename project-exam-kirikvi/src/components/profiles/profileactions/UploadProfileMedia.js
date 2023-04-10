@@ -22,7 +22,7 @@ export default function UploadProfileMedia() {
 
     const { register, handleSubmit, formState: { errors } } = useForm({
         resolver: yupResolver(schema),
-    });
+    });  
 
     const http = useAxios();
 
@@ -71,7 +71,7 @@ export default function UploadProfileMedia() {
 
     if (fetchingMedia) return <div>Loading...</div>;
 
-    if (fetchError) return <div>Error loading...</div>;
+    if (fetchError) return <div>Error loading media upload...</div>;
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -82,7 +82,8 @@ export default function UploadProfileMedia() {
             <fieldset disabled={uploadingMedia}>
                 <div>
                     <img src={media.avatar}></img>
-                    <input name="avatar" placeholder="Bvatar url" ref={register} />
+                    <input name="avatar" placeholder="Avatar url" ref={register} />
+                    {errors.avatar && <FormError>{errors.avatar.message}</FormError>}
                 </div>
 
                 <div>

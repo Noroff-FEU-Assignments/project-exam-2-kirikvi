@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { useParams, useNavigate } from "react-router-dom";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import ValidationError from "../../common/FormError";
+import FormError from "../../common/FormError";
 import { API_BASE_URL, POSTS_PATH } from "../../../constants/api";
 import useAxios from "../../../hooks/useAxios";
 import Heading from "../../layout/Heading";
@@ -92,13 +92,13 @@ export default function UpdatePost() {
             <form onSubmit={handleSubmit(onSubmit)}>
                 {updated && <div>The post was updated</div>}
 
-                {updateError && <ValidationError>{updateError}</ValidationError>}
+                {updateError && <FormError>{updateError}</FormError>}
                 
                
                 <fieldset disabled={updated}>
                     <div>
                         <input name="title" defaultValue={post.title} type="text" {...register("title")} />
-                        {errors.title && <ValidationError>{errors.title.message}</ValidationError>}
+                        {errors.title && <FormError>{errors.title.message}</FormError>}
                     </div>
 
                     <div>

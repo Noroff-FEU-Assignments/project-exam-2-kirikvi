@@ -1,19 +1,21 @@
 import { useState } from "react";
-import PropTypes from "prop-types";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import useAxios from "../../../hooks/useAxios";
 import { API_BASE_URL, PROFILES_PATH } from "../../../constants/api";
 
-export default function FollowProfile({ name }) {
+export default function FollowProfile() {
     const [error, setError] = useState(null);
 
     const http = useAxios();
+
+    const { name } = useParams();
+
     const navigate = useNavigate();
 
     const profileURL = API_BASE_URL + PROFILES_PATH + "/" + name;
 
     const followProfileURL = profileURL + "/follow";
-    const unfollowProfileURL = profileURL + "/unfollow"; 
+
     
     async function handleFollow() {
 
@@ -31,7 +33,3 @@ export default function FollowProfile({ name }) {
         </button>
     );
 }
-
-FollowProfile.propTypes = {
-    name: PropTypes.string.isRequired,
-};

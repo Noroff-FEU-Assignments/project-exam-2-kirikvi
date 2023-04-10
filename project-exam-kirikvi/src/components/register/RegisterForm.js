@@ -17,6 +17,8 @@ const schema = yup.object().shape({
   name: yup.string().required("Please enter a username"),
   email: yup.string().required("Please enter your email"),
   password: yup.string().required("Please enter your password").min(8, "Must be at least 8 characters"),
+  avatar: yup.string().notRequired(),
+  banner: yup.string().notRequired(),
 });
 
 export default function RegisterForm() {
@@ -48,32 +50,42 @@ export default function RegisterForm() {
 
     return (
         <>
-            <Form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(onSubmit)}>
 
                 {registerError && <FormError>{registerError}</FormError>}
                 
                 <fieldset disabled={submitting}>
                     <div>
                         <label>Username</label>
-                        <Input type="text" className="form-input border-b-indigo-500" {...register("name")} />
+                        <input type="text" {...register("name")} />
                         {errors.name && <FormError>{errors.name.message}</FormError>}
                     </div>
 
                     <div>
                         <label>E-mail</label>
-                        <Input type="email" {...register("email")} />
+                        <input type="email" {...register("email")} />
                         {errors.email && <FormError>{errors.email.message}</FormError>}
                     </div>
 
                     <div>
                         <label>Password</label>
-                        <Input type="password" {...register("password")} />
+                        <input type="password" {...register("password")} />
                         {errors.password && <FormError>{errors.password.message}</FormError>}
+                    </div>
+
+                    <div>
+                        <label>Avatar URL</label>
+                        <input type="text" {...register("avatar")} />
+                    </div>
+
+                    <div>
+                        <label>Banner URL</label>
+                        <input type="text" {...register("banner")} />
                     </div>
 
                     <Button>{submitting ? "Registers..." : "Register"}</Button>  
                 </fieldset>    
-            </Form>
+            </form>
         </>
     );
 }

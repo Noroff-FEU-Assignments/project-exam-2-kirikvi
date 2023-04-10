@@ -9,7 +9,7 @@ export default function PostsByFollowing() {
     const [error, setError] = useState(null);
 
     const http = useAxios();
-    const postsURL = API_BASE_URL + POSTS_PATH + "/following";
+    const postsURL = API_BASE_URL + POSTS_PATH + "/following?_author=true&_comments=true&_reactions=true";
     
     useEffect(function () {
         async function getPosts() {
