@@ -5,6 +5,11 @@ import PostContainer from "./postcontent/PostContainer";
 import PostHeader from "./postcontent/PostHeader";
 
 export default function PostItem({ id, title, media, created, author, body, comments, reactions }) {
+
+    if (!author.avatar) {
+        author.avatar = "https://cdn.pixabay.com/photo/2018/11/13/21/43/avatar-3814049_1280.png";
+    }
+
     return (
         <NavLink to={`/posts/${id}`}>
             <PostContainer>
