@@ -6,6 +6,8 @@ import Banner from "./profilecontent/media/Banner";
 import ProfileContainer from "./profilecontent/ProfileContainer";
 import Avatar from "./profilecontent/media/Avatar";
 import CountContainer from "./profilecontent/CountContainer";
+import FollowProfile from "./profileactions/FollowProfile";
+import UploadProfileMedia from "./profileactions/UploadProfileMedia";
 
 export default function SingleProfileDetails() {
     const [profile, setProfile] = useState([]);
@@ -64,6 +66,8 @@ export default function SingleProfileDetails() {
                     <p>Following: {profile._count.following}</p>
                     <p>Posts: {profile._count.posts}</p>
                 </CountContainer>
+
+                <FollowProfile />
 
             </ProfileContainer>
 

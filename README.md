@@ -43,3 +43,5 @@ I decided to go for CSS Modules for styling. I have not used CSS Modules before,
 
 ## References
 Noroff Lessons
+
+useHooks. useLocalStorage. [Url: https://usehooks.com/useLocalStorage/]

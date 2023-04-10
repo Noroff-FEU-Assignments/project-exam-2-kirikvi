@@ -7,6 +7,7 @@ import ProfileContainer from "./profilecontent/ProfileContainer";
 import Avatar from "./profilecontent/media/Avatar";
 import CountContainer from "./profilecontent/CountContainer";
 import FollowButton from "./profilecontent/FollowButton";
+//import UploadProfileMedia from "./profileactions/UploadProfileMedia";
 
 export default function UserProfileDetails() {
     const [profile, setProfile] = useState([]);
@@ -42,7 +43,7 @@ export default function UserProfileDetails() {
     return (
         <>
             <ProfileContainer>
-                
+    
                 <Banner>
                     <img src={profile.banner}></img>
                 </Banner>

@@ -11,6 +11,10 @@ h1 {
   display: none;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 /*Temporary styling to make it easier to see the page content*/
 nav {
   display: flex;

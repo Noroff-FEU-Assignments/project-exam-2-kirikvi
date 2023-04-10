@@ -6,20 +6,18 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import ValidationError from "../../common/FormError";
 import { API_BASE_URL, POSTS_PATH } from "../../../constants/api";
 import useAxios from "../../../hooks/useAxios";
-import Heading from "../../layout/Heading";
-import DeletePostButton from "./DeletePost";
 
 const schema = yup.object().shape({
-    title: yup.string().required("A title is required"),
+    body: yup.string().required("A body is required"),
 });
 
-export default function UpdatePost() {
+export default function CommentOnPost() {
     const [post, setPost] = useState(null);
-    const [updated, setUpdated] = useState(false);
+    const [commented, setCommented] = useState(false);
     const [fetchingPost, setFetchingPost] = useState(true);
-    const [updatingPost, setUpdatingPost] = useState(false);
+    const [commenting, setCommenting] = useState(false);
     const [fetchError, setFetchError] = useState(null);
-    const [updateError, setUpdateError] = useState(null);
+    const [commentError, setCommentError] = useState(null);
 
     const { register, handleSubmit, formState: { errors } } = useForm({
         resolver: yupResolver(schema),
@@ -33,6 +31,7 @@ export default function UpdatePost() {
 
     const postURL = API_BASE_URL + POSTS_PATH + "/" + id;
     
+    const commentURL = postURL + "/comment";
 
     //Get the post
     useEffect(
@@ -54,29 +53,33 @@ export default function UpdatePost() {
         []
     );
 
-    // Update the post when submitting
+    // Post the comment
     async function onSubmit(data) {
-        setUpdatingPost(true);
-        setUpdateError(null);
-        setUpdated(false);
+        setCommenting(true);
+        setCommentError(null);
+        setCommented(false);
+
+        const commentContainer = document.querySelector(".commentContainer");
+
+        commentContainer.innerHTML = "";
 
         console.log(data);
-
-        if(data.tags === "") {
-            data.tags = [];
-        }
         
         try{
-            const response = await http.put(postURL, data);
+            const response = await http.put(commentURL, data);
             console.log("response", response.data);
-            setUpdated(true);
-            //refresh the page after updating the post
+            setCommented(true);
+
+            commentContainer.innerHTML = 
+                `<div>${post.response}</div>`;
+
+            //refresh the page after commenting the post
             navigate(0);
         } catch (error) {
-            console.log("error", error.message);
-            setUpdateError(error.toString());
+            console.log("error", error);
+            setCommentError(error.toString());
         } finally {
-            setUpdatingPost(false);
+            setCommenting(false);
         }
     }
 
@@ -86,34 +89,20 @@ export default function UpdatePost() {
 
     return (
         <>
-            <hr></hr>
-            <Heading title="Update post" />
-            
+            <div className = "commentContainer"></div>    
+          
             <form onSubmit={handleSubmit(onSubmit)}>
-                {updated && <div>The post was updated</div>}
 
-                {updateError && <ValidationError>{updateError}</ValidationError>}
-                
+                {commented && <div>The post was commented</div>}
+
+                {commentError && <ValidationError>{commentError}</ValidationError>}
                
-                <fieldset disabled={updated}>
+                <fieldset disabled={commented}>
                     <div>
-                        <input name="title" defaultValue={post.title} type="text" {...register("title")} />
-                        {errors.title && <ValidationError>{errors.title.message}</ValidationError>}
+                        <textarea name="body" type="text" {...register("body")} />
                     </div>
 
-                    <div>
-                        <textarea name="body" defaultValue={post.body} type="text" {...register("body")} />
-                    </div>
-
-                    <div>
-                        <img src={post.media}></img>
-                        <input type="text" defaultValue={post.media}{...register("media")} />
-                    </div>
-
-                    <button>{updated ? "Updating..." : "Update"}</button>  
-
-                    <hr></hr>
-                    <DeletePostButton id={post.id} />  
+                    <button>{commented ? "Commenting..." : "Post comment"}</button>  
                 </fieldset>    
             </form>
         </>

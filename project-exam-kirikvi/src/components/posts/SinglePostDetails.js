@@ -5,6 +5,7 @@ import useAxios from "../../hooks/useAxios";
 import UpdatePost from "./postactions/UpdatePost";
 import Heading from "../layout/Heading";
 import ReactButton from "./postactions/ReactToPost";
+import CommentOnPost from "./postactions/CommentOnPost";
 
 export default function SinglePostDetails() {
     const [post, setPost] = useState([]);
@@ -55,6 +56,8 @@ export default function SinglePostDetails() {
             <p>{post.comments}</p>
 
             <hr></hr>
+
+            <CommentOnPost />
             
             <UpdatePost />
         </div> 

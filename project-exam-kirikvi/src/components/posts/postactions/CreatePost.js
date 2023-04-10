@@ -1,11 +1,10 @@
-import { useState, useContext } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import FormError from "../../common/FormError";
 import { API_BASE_URL, POSTS_PATH } from "../../../constants/api";
-import AuthContext from "../../../context/AuthContext";
 import useAxios from "../../../hooks/useAxios";
 import Button from "../../forms/Button";
 
@@ -25,8 +24,6 @@ export default function CreatePost() {
     const { register, handleSubmit, formState: { errors } } = useForm({
         resolver: yupResolver(schema),
     });   
-    
-    const [auth, setAuth] = useContext(AuthContext);
 
     async function onSubmit(data) {
         setSubmitting(true);
@@ -39,8 +36,8 @@ export default function CreatePost() {
         try{
             const response = await http.post(url, data);
             console.log("response", response.data);
-            setAuth(response.data);
-            navigate("/");
+            //refresh the page
+            navigate(0);
         } catch (error) {
             console.log("error", error.message);
             setError(error.toString());
@@ -71,7 +68,7 @@ export default function CreatePost() {
                     </div>
 
                     <div>
-                        <label>Add media</label>
+                        <label>Add media url</label>
                         <input type="text" className="bg-light" {...register("media")} />
                     </div>
 
