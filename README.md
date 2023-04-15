@@ -17,6 +17,8 @@ I made a style guide and a prototype for mobile screens.
 ### Technical
 The technical part is still where I am struggling the most. I prefer to not use frameworks and do everything "from scratch", so I spent some time figuring out how to use react bootstrap for both content, functionality and styling. After encountering some problems with react bootstrap, I decided to only focus on getting all the content before trying to style anything.
 
+I wanted to implement all the required tasks on the user stories checklist before focusing on improwing the user experience and user flow.
+
 #### API
 I followed the Noroff lessons and Noroff API on how to get the access token when registering and logging in, and it was a huge relief when it finally worked. After that I spent a lot of time creating the different files and pages to get all the data and content.
 
@@ -33,9 +35,8 @@ I followed the Noroff lesson on how to update a post, and I successfully was abl
 
 I noticed that every time I created or updated a post, I got signed out and lost access to the content. I had to login again after every time.
 
-#### Follow
+#### Follow, reaction and comment
 
-#### Reaction (emoji)
 
 #### CSS Modules
 I decided to go for CSS Modules for styling. I have not used CSS Modules before, so I would like some feedback on where to improve.
