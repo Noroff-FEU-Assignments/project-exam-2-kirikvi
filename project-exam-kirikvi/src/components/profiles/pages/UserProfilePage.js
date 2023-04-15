@@ -1,5 +1,5 @@
 import Heading from "../../layout/Heading";
-import AllPostsByProfile from "../../posts/AllPosts";
+import AllPostsByRegisteredUser from "../../posts/AllPostsByRegisteredUser";
 import UserProfileDetails from "../UserProfileDetails";
 import UploadProfileMedia from "../profileactions/UploadProfileMedia";
 
@@ -10,7 +10,7 @@ export default function UserProfilePage() {
             <Heading content="Profile" />
             <UploadProfileMedia />
             <UserProfileDetails />
-            <AllPostsByProfile />
+            <AllPostsByRegisteredUser />
         </>
     );
 }

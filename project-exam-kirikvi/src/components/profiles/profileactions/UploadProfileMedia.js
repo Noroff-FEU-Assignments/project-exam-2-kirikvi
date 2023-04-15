@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -26,19 +25,18 @@ export default function UploadProfileMedia() {
 
     const http = useAxios();
 
-    let { name } = useParams();
+    const url =  API_BASE_URL + PROFILES_PATH + "/" + "kiri_kvistnes";
 
-    const url = API_BASE_URL + PROFILES_PATH + "/" + name + "/media";
+    const mediaURL = url + "/media";
 
+    // Get the user profile
     useEffect(
         function () {
             async function getProfileMedia() {
                 try {
                     const response = await http.get(url);
-                    console.log("response", response.data);
                     setMedia(response.data);
                 } catch (error) {
-                    console.log(error);
                     setFetchError(error.toString());
                 } finally {
                     setFetchingMedia(false);
@@ -50,6 +48,7 @@ export default function UploadProfileMedia() {
         []
     );
 
+    // Upload the avatar and banner to the user profile
     async function onSubmit(data) {
         setUploadingMedia(true);
         setUploadError(null);
@@ -58,11 +57,9 @@ export default function UploadProfileMedia() {
         console.log(data);
 
         try {
-            const response = await http.put(url, data);
-            console.log("response", response.data);
+            const response = await http.put(mediaURL, data);
             setUploaded(true);
         } catch (error) {
-            console.log("error", error);
             setUploadError(error.toString());
         } finally {
             setUploadingMedia(false);
@@ -73,6 +70,7 @@ export default function UploadProfileMedia() {
 
     if (fetchError) return <div>Error loading media upload...</div>;
 
+    // Profile media upload form
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             {uploaded && <div>The media was uploaded</div>}
@@ -81,14 +79,12 @@ export default function UploadProfileMedia() {
 
             <fieldset disabled={uploadingMedia}>
                 <div>
-                    <img src={media.avatar} alt={media.avatar}></img>
-                    <input name="avatar" placeholder="Avatar url" ref={register} />
+                    <input name="avatar" placeholder="Avatar url" defaultValue={media.avatar} {...register(`avatar`)} />
                     {errors.avatar && <FormError>{errors.avatar.message}</FormError>}
                 </div>
 
                 <div>
-                    <img src={media.banner} alt={media.banner}></img>
-                    <input name="banner" placeholder="Banner url" ref={register} />
+                    <input name="banner" placeholder="Banner url" defaultValue={media.banner} {...register(`banner`)} />
                 </div>
 
                 <button>Upload media</button>

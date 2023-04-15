@@ -30,7 +30,7 @@ export default function SingleProfileDetails() {
         async function getProfile() {
             try {
                 const response = await http.get(profilesURL);
-                console.log("response", response.data);
+                //console.log("response", response.data);
                 setProfile(response.data);
             } catch (error) {
                 setError(error.toString());
