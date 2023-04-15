@@ -34,10 +34,10 @@ export default function PostItem({ id, title, media, created, author, body, comm
                 <HorizontalLine />
                 
                 <ReactToPost />
+                <p>{reactions.length} reactions</p>
                 
                 <HorizontalLine />
                 
-                <p>{reactions.length} reactions</p>
                 <p>{comments.length} comments</p>
                 <div>
                     <p>{comments.body}</p>

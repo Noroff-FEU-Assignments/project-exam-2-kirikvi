@@ -25,7 +25,7 @@ export default function RegisterForm() {
     const [submitting, setSubmitting] = useState(false);
     const [registerError, setRegisterError] = useState(null);
       
-    let history = useNavigate();
+    let navigate = useNavigate();
 
     const { register, handleSubmit, formState: { errors } } = useForm({
         resolver: yupResolver(schema),
@@ -40,7 +40,7 @@ export default function RegisterForm() {
         try {
             const response = await axios.post(url, data);
             setAuth(response.data);
-            history("/login");
+            navigate("/login");
         } catch(error) {
             setRegisterError(error.toString());
         } finally {

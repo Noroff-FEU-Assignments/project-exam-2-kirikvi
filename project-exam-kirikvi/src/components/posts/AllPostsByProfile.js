@@ -12,6 +12,8 @@ export default function AllPostsByProfile() {
 
     const { name } = useParams();
 
+    console.log("HEEE");
+
     const http = useAxios();
     const postsURL = API_BASE_URL + PROFILES_PATH + name + "/posts?_author=true&_comments=true&_reactions=true";
     console.log(postsURL);
@@ -33,7 +35,11 @@ export default function AllPostsByProfile() {
 
     if (loading) {
         return <div>Loading posts...</div>;
-    }    
+    }  
+    
+    if (posts.posts.length === 0) {
+        return <div>This user has no posts yet</div>
+    }
 
     if (error) {
         return <div>Error: An error occured</div>;

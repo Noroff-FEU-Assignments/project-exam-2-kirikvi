@@ -31,7 +31,7 @@ export default function CommentOnPost() {
 
     const postURL = API_BASE_URL + POSTS_PATH + "/" + id;
     
-    const commentURL = postURL + "/comment";
+    const commentURL = API_BASE_URL + "/social/posts/" + id + "/comment";
 
     //Get the post
     useEffect(
@@ -87,13 +87,13 @@ export default function CommentOnPost() {
 
                 {commentError && <FormError>{commentError}</FormError>}
                
-                <fieldset disabled={commented}>
+                <fieldset disabled={commenting}>
                     <div>
                         <textarea name="body" type="text" {...register("body")} />
                         {errors.body && <FormError>{errors.body.message}</FormError>}
                     </div>
 
-                    <button>{commented ? "Posting..." : "Post comment"}</button>  
+                    <button>{commenting ? "Posting..." : "Post comment"}</button>  
                 </fieldset>    
 
             </form>

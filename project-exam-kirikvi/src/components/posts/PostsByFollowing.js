@@ -28,7 +28,11 @@ export default function PostsByFollowing() {
 
     if (loading) {
         return <div>Loading posts...</div>;
-    }    
+    }   
+    
+    if (posts.length === 0) {
+        return <div>You are not following anyone yet. Follow other users to see their posts here.</div>
+    }
 
     if (error) {
         return <div>Error: An error occured</div>;

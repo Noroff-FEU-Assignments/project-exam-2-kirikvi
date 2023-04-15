@@ -5,7 +5,6 @@ import Banner from "./profilecontent/media/Banner";
 import ProfileContainer from "./profilecontent/ProfileContainer";
 import Avatar from "./profilecontent/media/Avatar";
 import CountContainer from "./profilecontent/CountContainer";
-import FollowButton from "./profilecontent/FollowButton";
 
 export default function UserProfileDetails() {
     const [profile, setProfile] = useState([]);
@@ -57,7 +56,8 @@ export default function UserProfileDetails() {
                     <p>Following: {profile._count.following}</p>
                     <p>Posts: {profile._count.posts}</p>
                 </CountContainer>
-                <FollowButton>Follow</FollowButton>
+            
+
             </ProfileContainer>
             <hr></hr>
 

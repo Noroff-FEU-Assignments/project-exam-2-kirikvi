@@ -87,7 +87,7 @@ export default function UploadProfileMedia() {
                     <input name="banner" placeholder="Banner url" defaultValue={media.banner} {...register(`banner`)} />
                 </div>
 
-                <button>Upload media</button>
+                <button>{uploadingMedia ? "Uploading media..." : "Upload media"}</button>
             </fieldset>          
         </form>
     );

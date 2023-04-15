@@ -62,12 +62,12 @@ export default function SinglePostDetails() {
                 <h3>{post.title}</h3>
                 <p>{post.body}</p>
                 <img src={post.media} alt={post.media}></img>
-                
-                <hr></hr>
+        
                 <ReactToPost />
+                <p>{post.reactions.length} likes</p>
                 <hr></hr>
                 
-                <p>{post.reactions.length} reactions</p>
+                
                 <p>{post.comments.body}</p>
             </PostContainer>
 
