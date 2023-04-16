@@ -36,13 +36,21 @@ I followed the Noroff lesson on how to update a post, and I successfully was abl
 I noticed that every time I created or updated a post, I got signed out and lost access to the content. I had to login again after every time.
 
 #### Follow, reaction and comment
-
+I followed the Noroff API documentation, and both follow/unfollow and reacting went fine, but when trying to comment on a post with a PUT request (as described in the API documentation) I received a 404 error message. I wrote a question in the Noroff discord forum about this, and got a tip to try making a POST request instead. It worked when changing it from a PUT to a POST request, which made sense.
 
 #### CSS Modules
 I decided to go for CSS Modules for styling. I have not used CSS Modules before, so I would like some feedback on where to improve.
 
+I ran into some problems styling the forms and buttons. When adding styles the buttons and forms stopped working.
+
+I'm finding this way of styling quite difficult, because I need to make a lot of different files in different folders, and I am not mastering the art of making tidy folders and files. If time I will see if I can find a tutorial on how to do this better.
+
 
 ## References
 Noroff Lessons
+
+Noroff API Documentation
+
+Noroff Discord Forum
 
 useHooks. useLocalStorage. [Url: https://usehooks.com/useLocalStorage/]
