@@ -6,7 +6,6 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import FormError from "../../common/FormError";
 import { API_BASE_URL, POSTS_PATH } from "../../../constants/api";
 import useAxios from "../../../hooks/useAxios";
-import Heading from "../../layout/Heading";
 import DeletePostButton from "./DeletePost";
 import Button from "../../forms/Button";
 
@@ -88,9 +87,7 @@ export default function UpdatePost() {
 
     return (
         <>
-            <hr></hr>
-            <Heading title="Update post" />
-            
+            <p className="title">Update or delete post</p>         
             <form onSubmit={handleSubmit(onSubmit)}>
                 {updated && <div>The post was updated</div>}
 
@@ -111,7 +108,7 @@ export default function UpdatePost() {
 
                     <div> 
                         <label for="media">Update media</label>
-                        <img src={post.media}></img>
+                        <img className="updateImg" src={post.media}></img>
                         <input type="text" name="media" defaultValue={post.media}{...register("media")} />
                     </div>
 

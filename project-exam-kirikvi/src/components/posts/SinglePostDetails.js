@@ -9,7 +9,7 @@ import PostHeader from "./postcontent/PostHeader";
 import ReactToPost from "./postactions/ReactToPost";
 import GetComments from "./GetComments";
 import CommentAndReactContainer from "./postcontent/CommentAndReactContainer";
-import CommentForm from "../forms/CommentForm";
+import EditPostDropdown from "./postactions/EditPostDropdown";
 
 export default function SinglePostDetails() {
     const [post, setPost] = useState([]);
@@ -66,6 +66,8 @@ export default function SinglePostDetails() {
                 <h3>{post.title}</h3>
                 <p>{post.body}</p>
                 <img src={post.media} alt={post.media}></img>
+
+                <EditPostDropdown />
         
                 <CommentAndReactContainer>
                     <ReactToPost />
@@ -80,7 +82,7 @@ export default function SinglePostDetails() {
 
             <CommentOnPost />
             
-            <UpdatePost />
+
         </div> 
     );
 }
