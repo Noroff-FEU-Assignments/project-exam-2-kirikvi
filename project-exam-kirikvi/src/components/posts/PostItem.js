@@ -30,14 +30,9 @@ export default function PostItem({ id, title, media, created, author, body, comm
                     <p>{body}</p>
                     <img src={media} alt={media}></img>
                 </NavLink>
-
-                <HorizontalLine />
                 
                 <ReactToPost />
-                <p>{reactions.length} reactions</p>
-                
-                <HorizontalLine />
-                
+                <p>{reactions.length} reactions</p>               
                 <p>{comments.length} comments</p>
                 <div>
                     <p>{comments.body}</p>

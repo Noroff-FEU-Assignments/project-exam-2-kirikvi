@@ -8,7 +8,7 @@ import Avatar from "./profilecontent/media/Avatar";
 import CountContainer from "./profilecontent/CountContainer";
 import FollowProfile from "./profileactions/FollowProfile";
 import UnfollowProfile from "./profileactions/UnfollowProfile";
-//import UploadProfileMedia from "./profileactions/UploadProfileMedia";
+
 
 export default function SingleProfileDetails() {
     const [profile, setProfile] = useState([]);

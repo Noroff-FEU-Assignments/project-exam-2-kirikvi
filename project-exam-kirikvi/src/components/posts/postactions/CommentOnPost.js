@@ -66,8 +66,7 @@ export default function CommentOnPost() {
             console.log("response", response.data);
             setCommented(true);
             //refresh the page after commenting the post
-            //navigate(0);
-            return <p>{response.body}</p>
+            navigate(0);
         } catch (error) {
             console.log("error", error);
             setCommentError(error.toString());

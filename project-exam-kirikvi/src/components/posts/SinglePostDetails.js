@@ -8,6 +8,7 @@ import CommentOnPost from "./postactions/CommentOnPost";
 import PostContainer from "./postcontent/PostContainer";
 import PostHeader from "./postcontent/PostHeader";
 import ReactToPost from "./postactions/ReactToPost";
+import GetComments from "./GetComments";
 
 export default function SinglePostDetails() {
     const [post, setPost] = useState([]);
@@ -67,16 +68,10 @@ export default function SinglePostDetails() {
                 <ReactToPost />
                 <p>{post.reactions.length} likes</p>            
                 
-                <div>
-                    <div>
-                        <img src={post.comments[0].author.avatar}></img>
-                        <h4>{post.comments[0].author.name}</h4>
-                    </div>
-                    <p>{post.comments[0].body}</p>
-                </div>
             </PostContainer>
 
             <hr></hr>
+            <GetComments />
 
             <CommentOnPost />
             
