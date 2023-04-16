@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { API_BASE_URL, POSTS_PATH } from "../../constants/api";
 import useAxios from "../../hooks/useAxios";
-import CommentItem from "./PostItem";
+import CommentItem from "./CommentItem";
 import { useParams } from "react-router-dom";
 
 export default function GetComments() {
