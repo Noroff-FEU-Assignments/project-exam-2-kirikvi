@@ -1,21 +1,28 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { API_BASE_URL, PROFILES_PATH } from "../../constants/api";
 import useAxios from "../../hooks/useAxios";
 import PostItem from "./PostItem";
+import AuthContext from "../../context/AuthContext";
+
 
 export default function AllPostsByRegisteredUser() {
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    const [auth, setAuth] = useContext(AuthContext);
+
+    const username = auth.name;
+
     const http = useAxios();
-    const postsURL = API_BASE_URL + PROFILES_PATH + "/kiri_kvistnes/posts?_author=true&_comments=true&_reactions=true";
+    
+    const postsURL = API_BASE_URL + PROFILES_PATH + "/" + username + "/posts?_author=true&_comments=true&_reactions=true";
 
     useEffect(function () {
         async function getPosts() {
             try {
                 const response = await http.get(postsURL);
-                console.log(response.data);
+                //console.log(response.data);
                 setPosts(response.data);
             } catch (error) {
                 setError(error.toString());

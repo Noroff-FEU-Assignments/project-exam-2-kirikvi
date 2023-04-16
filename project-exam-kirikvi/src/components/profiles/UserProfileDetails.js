@@ -1,18 +1,24 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { API_BASE_URL, PROFILES_PATH } from "../../constants/api";
 import useAxios from "../../hooks/useAxios";
 import Banner from "./profilecontent/media/Banner";
 import ProfileContainer from "./profilecontent/ProfileContainer";
 import Avatar from "./profilecontent/media/Avatar";
 import CountContainer from "./profilecontent/CountContainer";
+import AuthContext from "../../context/AuthContext";
+
 
 export default function UserProfileDetails() {
     const [profile, setProfile] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    const [auth, setAuth] = useContext(AuthContext);
+
+    const username = auth.name;
+
     const http = useAxios();
-    const profilesURL = API_BASE_URL + PROFILES_PATH + "/kiri_kvistnes" + "?_following=true&_followers=true&_posts=true"; 
+    const profilesURL = API_BASE_URL + PROFILES_PATH + "/" + username + "?_following=true&_followers=true&_posts=true"; 
 
     useEffect(function () {
         async function getProfile() {
