@@ -31,9 +31,9 @@ It was a good idea, as I ended up with tidier code and got everything up and run
 #### Create, update and delete post
 At first I wanted to include the tags array when creating a new post, but I could not figure out how to write the code to get the correct response. It did not work when trying to publish the post, so I ended up excluding the tags from the form and finally the post was created. I decided to just leave out the tags from there, and if I got time later I would look back into it, but as its not required I had to prioritize the required tasks first.
 
-I followed the Noroff lesson on how to update a post, and I successfully was able to update the post I created. 
+I followed the Noroff lesson on how to update and delete a post, and I successfully was able to update and delete the post I created. 
 
-I noticed that every time I created or updated a post, I got signed out and lost access to the content. I had to login again after every time.
+I wanted to create a drop down "edit" function, and found TK's tutorial "Dropdown menu - React Tutorial for Beginners" very helpful.
 
 #### Follow, reaction and comment
 I followed the Noroff API documentation, and both follow/unfollow and reacting went fine, but when trying to comment on a post with a PUT request (as described in the API documentation) I received a 404 error message. I wrote a question in the Noroff discord forum about this, and got a tip to try making a POST request instead. It worked when changing it from a PUT to a POST request, which made sense.
@@ -52,5 +52,7 @@ Noroff Lessons
 Noroff API Documentation
 
 Noroff Discord Forum
+
+TK. "Dropdown Menu - React Tutorial for Beginners" [Url (16.04.2023): https://www.youtube.com/watch?v=KROfo7vuIGY]
 
 useHooks. useLocalStorage. [Url: https://usehooks.com/useLocalStorage/]
