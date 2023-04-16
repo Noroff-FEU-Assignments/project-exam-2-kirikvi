@@ -40,10 +40,10 @@ export default function UpdatePost() {
             async function getPost() {
                 try{
                     const response = await http.get(postURL);
-                    console.log("response", response.data);
+                    //console.log("response", response.data);
                     setPost(response.data);
                 } catch (error) {
-                    console.log(error);
+                    //console.log(error);
                     setFetchError(error.toString());
                 } finally {
                     setFetchingPost(false);
@@ -60,7 +60,7 @@ export default function UpdatePost() {
         setUpdateError(null);
         setUpdated(false);
 
-        console.log(data);
+        //console.log(data);
 
         if(data.tags === "") {
             data.tags = [];
@@ -68,12 +68,12 @@ export default function UpdatePost() {
         
         try{
             const response = await http.put(postURL, data);
-            console.log("response", response.data);
+            //console.log("response", response.data);
             setUpdated(true);
             //refresh the page after updating the post
             navigate(0);
         } catch (error) {
-            console.log("error", error.message);
+            //console.log("error", error.message);
             setUpdateError(error.toString());
         } finally {
             setUpdatingPost(false);

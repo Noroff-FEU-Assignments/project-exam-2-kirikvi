@@ -30,6 +30,7 @@ export default function SinglePostDetails() {
             try {
                 const response = await http.get(postURL);
                 setPost(response.data);
+                console.log(response.data);
             } catch (error) {
                 setError(error.toString());
             } finally {
@@ -64,11 +65,15 @@ export default function SinglePostDetails() {
                 <img src={post.media} alt={post.media}></img>
         
                 <ReactToPost />
-                <p>{post.reactions.length} likes</p>
-                <hr></hr>
+                <p>{post.reactions.length} likes</p>            
                 
-                
-                <p>{post.comments.body}</p>
+                <div>
+                    <div>
+                        <img src={post.comments[0].author.avatar}></img>
+                        <h4>{post.comments[0].author.name}</h4>
+                    </div>
+                    <p>{post.comments[0].body}</p>
+                </div>
             </PostContainer>
 
             <hr></hr>

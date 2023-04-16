@@ -62,11 +62,12 @@ export default function CommentOnPost() {
         console.log(data);
         
         try{
-            const response = await http.put(commentURL, data);
+            const response = await http.post(commentURL, data);
             console.log("response", response.data);
             setCommented(true);
             //refresh the page after commenting the post
-            navigate(0);
+            //navigate(0);
+            return <p>{response.body}</p>
         } catch (error) {
             console.log("error", error);
             setCommentError(error.toString());
@@ -80,10 +81,10 @@ export default function CommentOnPost() {
     if (fetchError) return <div>Error loading post...</div>;
 
     return (
-        <>          
+        <>        
             <form onSubmit={handleSubmit(onSubmit)}> 
 
-                {commented && <div>The post was commented</div>}
+                {commented && <div>The comment is posted</div>}
 
                 {commentError && <FormError>{commentError}</FormError>}
                
