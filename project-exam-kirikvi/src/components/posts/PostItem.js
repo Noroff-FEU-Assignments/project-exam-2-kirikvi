@@ -3,7 +3,9 @@ import { NavLink } from "react-router-dom";
 import ReactToPost from "./postactions/ReactToPost";
 import PostContainer from "./postcontent/PostContainer";
 import PostHeader from "./postcontent/PostHeader";
-//import HorizontalLine from "../generalstyles/HorizontalLine";
+import CommentAndReactContainer from "./postcontent/CommentAndReactContainer";
+import HorizontalLine from "../generalstyles/HorizontalLine";
+
 export default function PostItem({ id, title, media, created, author, body, comments, reactions }) {
 
     if (!author.avatar) {
@@ -13,7 +15,6 @@ export default function PostItem({ id, title, media, created, author, body, comm
     return (
         <>
             <PostContainer>
-                <hr></hr>
                 <NavLink to={`/profiles/${author.name}`}>
                 <PostHeader>
                     <img className="avatar" src={author.avatar} alt="avatar"></img>    
@@ -31,12 +32,12 @@ export default function PostItem({ id, title, media, created, author, body, comm
                     <img src={media} alt={media}></img>
                 </NavLink>
                 
-                <ReactToPost />
-                <p>{reactions.length} reactions</p>               
-                <p>{comments.length} comments</p>
-                <div>
-                    <p>{comments.body}</p>
-                </div>
+                <CommentAndReactContainer>    
+                    <ReactToPost />
+                    <p>{reactions.length} likes</p>               
+                    <p>{comments.length} comments</p>
+                </CommentAndReactContainer>
+                <HorizontalLine />
             </PostContainer>
         </>    
         

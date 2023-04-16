@@ -8,6 +8,7 @@ import Avatar from "./profilecontent/media/Avatar";
 import CountContainer from "./profilecontent/CountContainer";
 import FollowProfile from "./profileactions/FollowProfile";
 import UnfollowProfile from "./profileactions/UnfollowProfile";
+import AllPostsByProfile from "../posts/AllPostsByProfile";
 
 
 export default function SingleProfileDetails() {
@@ -72,6 +73,8 @@ export default function SingleProfileDetails() {
                 <UnfollowProfile />
 
             </ProfileContainer>
+
+            <AllPostsByProfile />
 
         </>
     );

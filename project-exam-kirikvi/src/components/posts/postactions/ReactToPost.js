@@ -25,7 +25,7 @@ export default function ReactToPost() {
     }
 
     return (
-        <button className="reactButton" type="button" onClick={handleLike}>
+        <button type="button" onClick={handleLike}>
             {error ? "Error" : "👍"}
         </button>
     );

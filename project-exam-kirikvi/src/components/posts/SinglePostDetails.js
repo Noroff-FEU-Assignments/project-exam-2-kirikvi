@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, NavLink } from "react-router-dom";
 import { API_BASE_URL, POSTS_PATH } from "../../constants/api";
 import useAxios from "../../hooks/useAxios";
 import UpdatePost from "./postactions/UpdatePost";
-//import ReactButton from "./postactions/ReactToPost";
 import CommentOnPost from "./postactions/CommentOnPost";
 import PostContainer from "./postcontent/PostContainer";
 import PostHeader from "./postcontent/PostHeader";
 import ReactToPost from "./postactions/ReactToPost";
 import GetComments from "./GetComments";
+import CommentAndReactContainer from "./postcontent/CommentAndReactContainer";
+
 
 export default function SinglePostDetails() {
     const [post, setPost] = useState([]);
@@ -31,7 +32,7 @@ export default function SinglePostDetails() {
             try {
                 const response = await http.get(postURL);
                 setPost(response.data);
-                console.log(response.data);
+                ////console.log(response.data);
             } catch (error) {
                 setError(error.toString());
             } finally {
@@ -52,21 +53,25 @@ export default function SinglePostDetails() {
     return (
         <div>
             <PostContainer>
-                <hr></hr>
-                <PostHeader>
-                    <img className="avatar" src={post.author.avatar} alt="avatar"></img>    
+                <NavLink to={`/profiles/${post.author.name}`}>
+                    <PostHeader>
+                        <img className="avatar" src={post.author.avatar} alt="avatar"></img>    
 
-                    <div>
-                        <h2>{post.author.name}</h2>
-                        <small>{post.created}</small>
-                    </div>   
-                </PostHeader>
+                        <div>
+                            <h2>{post.author.name}</h2>
+                            <small>{post.created}</small>
+                        </div>   
+                    </PostHeader>
+                </NavLink>
                 <h3>{post.title}</h3>
                 <p>{post.body}</p>
                 <img src={post.media} alt={post.media}></img>
         
-                <ReactToPost />
-                <p>{post.reactions.length} likes</p>            
+                <CommentAndReactContainer>
+                    <ReactToPost />
+                    <p>{post.reactions.length} likes</p>
+                    <p>{post.comments.length} comments</p>
+                </CommentAndReactContainer>            
                 
             </PostContainer>
 

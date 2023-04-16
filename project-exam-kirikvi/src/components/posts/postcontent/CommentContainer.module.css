@@ -1,0 +1,22 @@
+.commentContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: #f3f3f3;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.commentContainer div {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.commentContainer img {
+    border-radius: 100px;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin: 5px 10px 5px 0;
+}

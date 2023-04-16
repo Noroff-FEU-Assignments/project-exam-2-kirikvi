@@ -1,0 +1,17 @@
+.commentAndReactContainer {
+    display: flex;
+    justify-content:space-between;
+    align-items: baseline;
+}
+
+.commentAndReactContainer button {
+    background-color: #fefefe;
+    border: none;
+    height: 30px;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.commentAndReactContainer button:hover {
+    cursor: pointer;
+}

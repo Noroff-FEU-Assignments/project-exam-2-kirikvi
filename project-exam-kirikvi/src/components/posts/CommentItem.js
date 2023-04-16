@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-
+import CommentContainer from "./postcontent/CommentContainer";
 export default function CommentItem({ created, author, body }) {
 
     if (!author.avatar) {
@@ -8,14 +8,13 @@ export default function CommentItem({ created, author, body }) {
 
     return (
         <>
-        <div>
+        <CommentContainer>
             <div>
-                <img src={author.avatar}></img>
+                <img src={author.avatar}></img>  
                 <h4>{author.name}</h4>
-                <small>{created}</small>
             </div>
             <p>{body}</p>
-        </div> 
+        </CommentContainer> 
         </>
     );
 

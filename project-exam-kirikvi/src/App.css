@@ -25,18 +25,6 @@ nav img {
   max-height: 40px;
 }
 
-.reactButton {
-  background-color: #fefefe;
-  border: none;
-  height: 30px;
-  text-align: left;
-  font-size: 1.5rem;
-}
-
-.reactButton:hover {
-  cursor: pointer;
-}
-
 hr {
   width: 100%;
 }
