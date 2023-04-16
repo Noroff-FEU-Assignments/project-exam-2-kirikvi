@@ -5,13 +5,15 @@
 html {
   font-family: "omnes-pro", sans-serif;
   background-color: #fefefe;
+  color: #161616;
 }
 
 h1 {
   display: none;
 }
 
-a:hover {
+a:hover,
+button:hover {
   cursor: pointer;
 }
 
@@ -28,3 +30,17 @@ nav img {
 hr {
   width: 100%;
 }
+
+fieldset {
+  border: none;
+}
+
+/*textarea,
+input {
+  border: none;
+  background-color: #fefefe;
+  border-bottom: 2px solid #e3e1ff;
+  margin-bottom: 5px;
+  display: block;
+  width: 100%;
+}*/

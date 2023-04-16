@@ -8,6 +8,8 @@ import { API_BASE_URL, POSTS_PATH } from "../../../constants/api";
 import useAxios from "../../../hooks/useAxios";
 import Heading from "../../layout/Heading";
 import DeletePostButton from "./DeletePost";
+import Button from "../../forms/Button";
+
 
 const schema = yup.object().shape({
     title: yup.string().required("A title is required"),
@@ -97,20 +99,23 @@ export default function UpdatePost() {
                
                 <fieldset disabled={updated}>
                     <div>
+                        <label for="title">Update Title</label>
                         <input name="title" defaultValue={post.title} type="text" {...register("title")} />
                         {errors.title && <FormError>{errors.title.message}</FormError>}
                     </div>
 
                     <div>
+                        <label for="body">Update body</label>
                         <textarea name="body" defaultValue={post.body} type="text" {...register("body")} />
                     </div>
 
-                    <div>
+                    <div> 
+                        <label for="media">Update media</label>
                         <img src={post.media}></img>
-                        <input type="text" defaultValue={post.media}{...register("media")} />
+                        <input type="text" name="media" defaultValue={post.media}{...register("media")} />
                     </div>
 
-                    <button>{updated ? "Updating..." : "Update"}</button>  
+                    <Button>{updated ? "Updating..." : "Update"}</Button>  
 
                     <hr></hr>
                     <DeletePostButton id={post.id} />  

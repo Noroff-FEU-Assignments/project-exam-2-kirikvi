@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 import useAxios from "../../../hooks/useAxios";
 import { API_BASE_URL, POSTS_PATH } from "../../../constants/api";
-
+import DeleteButton from "../../forms/DeleteButton";
 export default function DeletePostButton({ id }) {
     const [error, setError] = useState(null);
 
@@ -28,9 +28,11 @@ export default function DeletePostButton({ id }) {
     }
 
     return (
-        <button type="button" onClick={handleDelete}>
-            {error ? "Error" : "Delete"}
-        </button>
+        <DeleteButton>
+            <button type="button" onClick={handleDelete}>
+                {error ? "Error" : "Delete"}
+            </button>
+        </DeleteButton>
     );
 }
 

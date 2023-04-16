@@ -80,7 +80,7 @@ export default function CommentOnPost() {
     if (fetchError) return <div>Error loading post...</div>;
 
     return (
-        <>        
+        <>    
             <form onSubmit={handleSubmit(onSubmit)}> 
 
                 {commented && <div>The comment is posted</div>}
@@ -95,7 +95,6 @@ export default function CommentOnPost() {
 
                     <button>{commenting ? "Posting..." : "Post comment"}</button>  
                 </fieldset>    
-
             </form>
         </>
     );

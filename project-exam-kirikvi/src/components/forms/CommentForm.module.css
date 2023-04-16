@@ -1,0 +1,20 @@
+.commentForm {
+   padding: 20px 0;
+}
+
+.commentForm textarea {
+    border: 1px solid #161616;
+    border-radius: 20px;
+    height: 40px;
+    padding: 10px;
+}
+
+.commentForm textarea:active {
+    border: 2px solid #4f42fb;
+}
+
+.commentForm button {
+    background-color: transparent;
+    border: none;
+    float: right;
+}

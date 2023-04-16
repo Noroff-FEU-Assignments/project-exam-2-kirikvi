@@ -9,7 +9,7 @@ import PostHeader from "./postcontent/PostHeader";
 import ReactToPost from "./postactions/ReactToPost";
 import GetComments from "./GetComments";
 import CommentAndReactContainer from "./postcontent/CommentAndReactContainer";
-
+import CommentForm from "../forms/CommentForm";
 
 export default function SinglePostDetails() {
     const [post, setPost] = useState([]);
