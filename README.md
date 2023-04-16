@@ -33,7 +33,7 @@ At first I wanted to include the tags array when creating a new post, but I coul
 
 I followed the Noroff lesson on how to update and delete a post, and I successfully was able to update and delete the post I created. 
 
-I wanted to create a drop down "edit" function, and found TK's tutorial "Dropdown menu - React Tutorial for Beginners" very helpful.
+I wanted to create a drop down "edit" function, and found TK's tutorials "Dropdown menu - React Tutorial for Beginners" and "Click Outside to Close - React Hook" very helpful.
 
 #### Follow, reaction and comment
 I followed the Noroff API documentation, and both follow/unfollow and reacting went fine, but when trying to comment on a post with a PUT request (as described in the API documentation) I received a 404 error message. I wrote a question in the Noroff discord forum about this, and got a tip to try making a POST request instead. It worked when changing it from a PUT to a POST request, which made sense.
@@ -54,5 +54,7 @@ Noroff API Documentation
 Noroff Discord Forum
 
 TK. "Dropdown Menu - React Tutorial for Beginners" [Url (16.04.2023): https://www.youtube.com/watch?v=KROfo7vuIGY]
+
+TK. "Click Outside to Close - React Hook" [Url (16.04.2023): https://www.youtube.com/watch?v=HfZ7pdhS43s]
 
 useHooks. useLocalStorage. [Url: https://usehooks.com/useLocalStorage/]
