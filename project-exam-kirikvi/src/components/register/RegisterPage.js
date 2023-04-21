@@ -1,13 +1,13 @@
 import Heading from "../layout/Heading";
 import RegisterForm from "./RegisterForm";
-import { NavLink } from "react-router-dom";
+import Link from "../forms/Link";
 
 export default function RegisterPage() {
     return (
     <>
         <Heading content="Register" />
         <RegisterForm />
-        <NavLink to={"/login"}><p>Already registered? Click here to log in.</p> </NavLink>
+        <Link link={"/login"} text={"Already registered? Click here login."} />
     </>
     );
 }

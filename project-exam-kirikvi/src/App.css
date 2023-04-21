@@ -27,6 +27,14 @@ textarea {
   width: 100%;
 }
 
+input:active, 
+input:focus,
+textarea:active,
+textarea:focus {
+  border-bottom: 2px solid #4F42FB;
+  outline: none;
+}
+
 textarea {
   resize: none;
 }
@@ -34,6 +42,8 @@ textarea {
 /*Temporary styling to make it easier to see the page content*/
 fieldset {
   border: none;
+  margin: 0;
+  padding: 0;
 }
 
 .updateImg {
@@ -82,13 +92,3 @@ fieldset {
   font-weight: 600;
   font-size: 1rem;
 }
-
-/*textarea,
-  input {
-  border: none;
-  background-color: #fefefe;
-  border-bottom: 2px solid #e3e1ff;
-  margin-bottom: 5px;
-  display: block;
-  width: 100%;
-}*/

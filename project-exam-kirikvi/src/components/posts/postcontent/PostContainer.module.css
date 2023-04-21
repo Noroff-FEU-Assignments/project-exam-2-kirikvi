@@ -5,6 +5,12 @@
     margin: 70px 0;
 }
 
+
+.postContainer h3,
+.postContainer p {
+    margin: 5px 0;
+}
+
 .postContainer img {
     border-radius: 20px;
     max-height: 300px;

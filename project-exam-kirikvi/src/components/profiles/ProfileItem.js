@@ -4,11 +4,15 @@ import ProfileInfoContainer from "./profilecontent/ProfileInfoContainer";
 import FollowProfile from "./profileactions/FollowProfile";
 
 export default function ProfileItem({ name, avatar }) {
+
+    if (!avatar) {
+        avatar = "https://static.vecteezy.com/system/resources/thumbnails/005/544/770/small/profile-icon-design-free-vector.jpg";
+    }
     return (
         <>  
             <NavLink to={`/profiles/${name}`}>
                 <ProfileInfoContainer>
-                    <img className="avatar" src={avatar} alt="Avatar"></img>
+                    <img src={avatar} alt="Avatar"></img>
                     <h2>{name}</h2>
                     <FollowProfile>
                         <button>Follow</button>

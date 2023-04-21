@@ -4,12 +4,10 @@ import ReactToPost from "./postactions/ReactToPost";
 import PostContainer from "./postcontent/PostContainer";
 import PostHeader from "./postcontent/PostHeader";
 import CommentAndReactContainer from "./postcontent/CommentAndReactContainer";
-import HorizontalLine from "../generalstyles/HorizontalLine";
-
 export default function PostItem({ id, title, media, created, author, body, comments, reactions }) {
 
     if (!author.avatar) {
-        author.avatar = "https://images.unsplash.com/photo-1557682250-33bd709cbe85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=829&q=80";
+        author.avatar = "https://static.vecteezy.com/system/resources/thumbnails/005/544/770/small/profile-icon-design-free-vector.jpg";
     }
 
     return (

@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate, NavLink } from "react-router-dom";
 import { API_BASE_URL, POSTS_PATH } from "../../constants/api";
 import useAxios from "../../hooks/useAxios";
-import UpdatePost from "./postactions/UpdatePost";
 import CommentOnPost from "./postactions/CommentOnPost";
 import PostContainer from "./postcontent/PostContainer";
 import PostHeader from "./postcontent/PostHeader";

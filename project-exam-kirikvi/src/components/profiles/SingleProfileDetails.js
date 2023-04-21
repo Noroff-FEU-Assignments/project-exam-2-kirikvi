@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { API_BASE_URL, PROFILES_PATH } from "../../constants/api";
 import useAxios from "../../hooks/useAxios";
@@ -9,6 +9,7 @@ import CountContainer from "./profilecontent/CountContainer";
 import FollowProfile from "./profileactions/FollowProfile";
 import UnfollowProfile from "./profileactions/UnfollowProfile";
 import AllPostsByProfile from "../posts/AllPostsByProfile";
+import AuthContext from "../../context/AuthContext";
 
 
 export default function SingleProfileDetails() {
@@ -16,12 +17,30 @@ export default function SingleProfileDetails() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    const [auth] = useContext(AuthContext);
+
+    // Get the username for the logged in user.
+    const username = auth.name;
+
+    console.log(username);
+
     let history = useNavigate();
 
     const { name } = useParams();
 
+    //If the user does not exist, navigate to the homepage
     if (!name) {
         history("/profiles");
+    }
+
+    //Navigate the logged in user to its own profile
+    if (username === name) {
+        history("/userprofile");
+    }
+
+    //If the user has no chosen avatar, show this image.
+    if (!profile.avatar) {
+        profile.avatar = "https://static.vecteezy.com/system/resources/thumbnails/005/544/770/small/profile-icon-design-free-vector.jpg";
     }
 
     const http = useAxios();

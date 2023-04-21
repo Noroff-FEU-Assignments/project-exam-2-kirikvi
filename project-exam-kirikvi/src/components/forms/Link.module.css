@@ -1,0 +1,9 @@
+.link {
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
+.link:hover {
+    font-weight: 600;
+}

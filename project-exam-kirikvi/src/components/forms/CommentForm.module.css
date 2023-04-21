@@ -6,13 +6,11 @@
 .commentForm textarea {
     border: 1px solid #161616;
     border-radius: 20px;
-    max-height: 50px;
     padding: 10px;
-    width: 100%;
-    resize: none;
 }
 
-.commentForm textarea:active {
+.commentForm textarea:active,
+.commentForm textarea:focus {
     border: 2px solid #4f42fb;
 }
 
