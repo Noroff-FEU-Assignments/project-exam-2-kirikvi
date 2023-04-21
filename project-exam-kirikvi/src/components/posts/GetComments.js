@@ -20,7 +20,6 @@ export default function GetComments() {
             try {
                 const response = await http.get(postURL);
                 setComments(response.data);
-                console.log(response.data);
             } catch (error) {
                 setError(error.toString());
             } finally {

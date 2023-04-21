@@ -1,0 +1,10 @@
+.menuTrigger img {
+    position: absolute;
+    top: 60px;
+    right: 50px;
+    width: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    float: right;
+    z-index: 100;
+  }

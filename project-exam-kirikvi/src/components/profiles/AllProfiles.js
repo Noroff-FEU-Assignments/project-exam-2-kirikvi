@@ -9,13 +9,12 @@ export default function AllProfiles() {
     const [error, setError] = useState(null);
 
     const http = useAxios();
-    const profilesURL = API_BASE_URL + PROFILES_PATH;
+    const profilesURL = API_BASE_URL + PROFILES_PATH  + "?limit=50&offset=50&sort=name&sortOrder=asc";
     
     useEffect(function () {
         async function getProfiles() {
             try {
                 const response = await http.get(profilesURL);
-                //console.log("response", response.data);
                 setProfiles(response.data);
             } catch (error) {
                 setError(error.toString());

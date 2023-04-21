@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./LogoutButton.module.css";
 
-export default function LogoutButton(props) {
+export default function LogoutButton() {
     return (
-        <button className={styles.logoutButton}>{props.children}</button>
+        <button className={styles.logoutButton}></button>
     )
 }

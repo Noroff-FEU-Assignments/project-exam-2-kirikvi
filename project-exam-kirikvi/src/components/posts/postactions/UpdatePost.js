@@ -41,10 +41,8 @@ export default function UpdatePost() {
             async function getPost() {
                 try{
                     const response = await http.get(postURL);
-                    //console.log("response", response.data);
                     setPost(response.data);
                 } catch (error) {
-                    //console.log(error);
                     setFetchError(error.toString());
                 } finally {
                     setFetchingPost(false);

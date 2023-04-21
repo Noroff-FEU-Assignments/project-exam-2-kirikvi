@@ -17,7 +17,7 @@ export default function UnfollowProfile() {
     const unfollowProfileURL = profileURL + "/unfollow";
 
     
-    async function handleUnollow() {
+    async function handleUnfollow() {
 
             try {
                 await http.put(unfollowProfileURL);
@@ -28,7 +28,7 @@ export default function UnfollowProfile() {
     }
 
     return (
-        <button type="button" onClick={handleUnollow}>
+        <button type="button" onClick={handleUnfollow}>
             {error ? "Error" : "Unfollow"}
         </button>
     );

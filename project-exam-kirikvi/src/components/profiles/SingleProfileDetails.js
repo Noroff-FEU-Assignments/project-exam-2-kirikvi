@@ -21,9 +21,7 @@ export default function SingleProfileDetails() {
 
     // Get the username for the logged in user.
     const username = auth.name;
-
-    console.log(username);
-
+    
     let history = useNavigate();
 
     const { name } = useParams();

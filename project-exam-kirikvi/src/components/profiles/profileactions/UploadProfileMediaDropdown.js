@@ -1,13 +1,13 @@
 import options from "../../../icons/options.png";
 import React, {useEffect, useRef, useState } from "react";
-import UpdatePost from "./UpdatePost";
+import UploadProfileMedia from "./UploadProfileMedia";
 
-export default function EditPostDropdown() {
+export default function UploadProfileMediaDropdown() {
 
     const [open, setOpen ] = useState(false);
 
     
-    //Lets the user close the dropdown update/delete form when clicking anywhere outside the form.
+    //Lets the user close the dropdown menu when clicking anywhere outside the form.
     let menuRef = useRef();
     
     useEffect(() => {
@@ -24,6 +24,7 @@ export default function EditPostDropdown() {
         }
     });
 
+    //Display the dropdown menu
     return (
         <div>
             <div ref={menuRef}>
@@ -33,7 +34,7 @@ export default function EditPostDropdown() {
 
                 <div className={`dropdownMenu ${open? "active" : "inactive"}`} >
                     <ul>
-                        <UpdatePost />
+                        <UploadProfileMedia />
                     </ul>
                 </div>
             </div>

@@ -6,7 +6,7 @@ import ProfileContainer from "./profilecontent/ProfileContainer";
 import Avatar from "./profilecontent/media/Avatar";
 import CountContainer from "./profilecontent/CountContainer";
 import AuthContext from "../../context/AuthContext";
-
+import UploadProfileMediaDropdown from "./profileactions/UploadProfileMediaDropdown";
 
 export default function UserProfileDetails() {
     const [profile, setProfile] = useState([]);
@@ -24,7 +24,6 @@ export default function UserProfileDetails() {
         async function getProfile() {
             try {
                 const response = await http.get(profilesURL);
-                //console.log("response", response.data);
                 setProfile(response.data);
             } catch (error) {
                 setError(error.toString());
@@ -45,6 +44,8 @@ export default function UserProfileDetails() {
 
     return (
         <>
+            <UploadProfileMediaDropdown />
+
             <ProfileContainer>
     
                 <Banner>

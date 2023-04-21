@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import AuthContext from "../../../context/AuthContext";
 import Navigation from "./Navigation";
 import ProfileImage from "./ProfileImage";
-import LogoutButton from "../../login/LogoutButton";
+//import LogoutButton from "../../login/LogoutButton";
 
 //ICONS & LOGO
 import home from "../../../icons/home.png";
@@ -31,7 +31,7 @@ function Nav() {
                     <NavLink to="/userprofile">
                         <ProfileImage />
                     </NavLink>
-                    <LogoutButton onClick={logout}>Log out</LogoutButton>
+                    <button className="logoutButton" onClick={logout}>Log out</button>
                 </>
              ) : (
                 <>

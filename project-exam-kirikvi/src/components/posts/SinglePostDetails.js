@@ -31,7 +31,6 @@ export default function SinglePostDetails() {
             try {
                 const response = await http.get(postURL);
                 setPost(response.data);
-                ////console.log(response.data);
             } catch (error) {
                 setError(error.toString());
             } finally {

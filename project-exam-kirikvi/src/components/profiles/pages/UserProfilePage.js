@@ -8,7 +8,6 @@ export default function UserProfilePage() {
     return (
         <>
             <Heading content="Profile" />
-            <UploadProfileMedia />
             <UserProfileDetails />
             <AllPostsByRegisteredUser />
         </>

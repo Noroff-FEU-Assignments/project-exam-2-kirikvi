@@ -5,6 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import FormError from "../../common/FormError";
 import useAxios from "../../../hooks/useAxios";
 import { API_BASE_URL, PROFILES_PATH } from "../../../constants/api";
+import Button from "../../forms/Button";
 
 const schema = yup.object().shape({
     avatar: yup.string().notRequired(),
@@ -77,17 +78,23 @@ export default function UploadProfileMedia() {
 
             {uploadError && <FormError>{uploadError}</FormError>}
 
+            <p>Upload avatar or/and banner</p>
+
             <fieldset disabled={uploadingMedia}>
                 <div>
+                    <img className="updateImage" src={media.avatar} alt={media.avatar}></img>
+                    <label for="avatar">Avatar URL</label> 
                     <input name="avatar" placeholder="Avatar url" defaultValue={media.avatar} {...register(`avatar`)} />
                     {errors.avatar && <FormError>{errors.avatar.message}</FormError>}
                 </div>
 
                 <div>
+                    <img className="updateImage" src={media.banner} alt={media.banner}></img>
+                    <label for="banner">Banner URL</label> 
                     <input name="banner" placeholder="Banner url" defaultValue={media.banner} {...register(`banner`)} />
                 </div>
 
-                <button>{uploadingMedia ? "Uploading media..." : "Upload media"}</button>
+                <Button>{uploadingMedia ? "Uploading media..." : "Upload media"}</Button>
             </fieldset>          
         </form>
     );
