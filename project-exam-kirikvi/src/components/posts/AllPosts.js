@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import { API_BASE_URL, POSTS_PATH } from "../../constants/api";
 import useAxios from "../../hooks/useAxios";
 import PostItem from "./PostItem";
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import AuthContext from "../../context/AuthContext";
 
 export default function AllPosts() {
     const [posts, setPosts] = useState([]);
@@ -11,6 +14,14 @@ export default function AllPosts() {
     const http = useAxios();
     const postsURL = API_BASE_URL + POSTS_PATH + "?_author=true&_comments=true&_reactions=true";
     
+    const [auth] = useContext(AuthContext);
+    const navigate = useNavigate();
+
+    //If no one is logged in, navigate to the login page
+    if(!auth){
+        navigate("/login");
+    }
+
     useEffect(function () {
         async function getPosts() {
             try {
