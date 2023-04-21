@@ -6,6 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import FormError from "../../common/FormError";
 import { API_BASE_URL, POSTS_PATH } from "../../../constants/api";
 import useAxios from "../../../hooks/useAxios";
+import CommentForm from "../../forms/CommentForm";
 
 const schema = yup.object().shape({
     body: yup.string().required("Please enter the comment you would like to post"),
@@ -80,7 +81,7 @@ export default function CommentOnPost() {
     if (fetchError) return <div>Error loading post...</div>;
 
     return (
-        <>    
+        <CommentForm>   
             <form onSubmit={handleSubmit(onSubmit)}> 
 
                 {commented && <div>The comment is posted</div>}
@@ -96,6 +97,6 @@ export default function CommentOnPost() {
                     <button>{commenting ? "Posting..." : "Post comment"}</button>  
                 </fieldset>    
             </form>
-        </>
+        </CommentForm>
     );
 }

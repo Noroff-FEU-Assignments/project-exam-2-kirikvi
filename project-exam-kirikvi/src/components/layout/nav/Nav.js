@@ -1,11 +1,13 @@
 import { useContext } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import AuthContext from "../../context/AuthContext";
+import AuthContext from "../../../context/AuthContext";
+import Navigation from "./Navigation";
+import ProfileImage from "./ProfileImage";
 
 //ICONS & LOGO
-import home from "../../icons/home.png";
-import profile from "../../icons/profile.png";
-import logo from "../../logo/SocializeLogo.png";
+import home from "../../../icons/home.png";
+import profile from "../../../icons/profile.png";
+import logo from "../../../logo/SocializeLogo.png";
 
 function Nav() {
     const [auth, setAuth] = useContext(AuthContext);
@@ -18,14 +20,16 @@ function Nav() {
     }
 
     return (
-        <nav>
+        <Navigation>
             <NavLink to="/"><img alt="socialize logo" src={logo}/></NavLink>
              {auth ? (
                 <>
                     <NavLink to="/postsbyfollowing"><img alt="home icon" src={home}/></NavLink>
                     <NavLink to="/profiles"><img alt="profile icon" src={profile}/></NavLink>
                     
-                    <NavLink to="/userprofile"><img alt="profle" src={auth.avatar}/></NavLink>
+                    <NavLink to="/userprofile">
+                        <ProfileImage />
+                    </NavLink>
                     <button onClick={logout}>Log out</button>
                 </>
              ) : (
@@ -34,7 +38,7 @@ function Nav() {
                     <NavLink to="/login">Login </NavLink>
                 </>  
              )}
-        </nav>
+        </Navigation>
     );
 }
 

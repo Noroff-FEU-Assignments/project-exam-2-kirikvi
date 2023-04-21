@@ -37,7 +37,6 @@ export default function PostItem({ id, title, media, created, author, body, comm
                     <p>{reactions.length} likes</p>               
                     <p>{comments.length} comments</p>
                 </CommentAndReactContainer>
-                <HorizontalLine />
             </PostContainer>
         </>    
         

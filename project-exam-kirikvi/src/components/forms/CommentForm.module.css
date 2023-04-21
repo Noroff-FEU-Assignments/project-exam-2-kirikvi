@@ -1,12 +1,15 @@
 .commentForm {
    padding: 20px 0;
+   width: 100%;
 }
 
 .commentForm textarea {
     border: 1px solid #161616;
     border-radius: 20px;
-    height: 40px;
+    max-height: 50px;
     padding: 10px;
+    width: 100%;
+    resize: none;
 }
 
 .commentForm textarea:active {
@@ -15,6 +18,7 @@
 
 .commentForm button {
     background-color: transparent;
+    font-weight: 600;
     border: none;
     float: right;
 }

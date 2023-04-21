@@ -7,7 +7,10 @@ export default function LoginPage() {
         <>
             <Heading content="Login" />
             <LoginForm />
-            <NavLink to={"/register"}><p>Not registered yet? Click here to register.</p> </NavLink>
+            
+            <NavLink to={"/register"}>
+                <p>Not registered yet? Click here to register.</p>
+            </NavLink>
         </>
     );
 }

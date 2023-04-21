@@ -17,20 +17,21 @@ button:hover {
   cursor: pointer;
 }
 
-/*Temporary styling to make it easier to see the page content*/
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-nav img {
-  max-height: 40px;
-}
-
-hr {
+input, 
+textarea {
+  border: none;
+  background-color: #fefefe;
+  border-bottom: 2px solid #e3e1ff;
+  margin-bottom: 5px;
+  display: block;
   width: 100%;
 }
 
+textarea {
+  resize: none;
+}
+
+/*Temporary styling to make it easier to see the page content*/
 fieldset {
   border: none;
 }
@@ -83,7 +84,7 @@ fieldset {
 }
 
 /*textarea,
-input {
+  input {
   border: none;
   background-color: #fefefe;
   border-bottom: 2px solid #e3e1ff;

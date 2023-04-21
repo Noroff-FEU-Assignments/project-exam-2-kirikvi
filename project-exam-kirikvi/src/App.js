@@ -4,7 +4,7 @@ import {
   Routes,
   Route
 } from 'react-router-dom';
-import Nav from './components/layout/Nav';
+import Nav from './components/layout/nav/Nav';
 import { AuthProvider } from './context/AuthContext';
 
 //Route paths
