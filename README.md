@@ -80,6 +80,10 @@ I ran into some problems styling the forms and buttons. When adding styles the b
 
 I'm finding this way of styling quite difficult, because I need to make a lot of different files in different folders, and I am not mastering the art of making tidy folders and files. If time I will see if I can find a tutorial on how to do this better.
 
+### What I would improve
+If I had more time I would
+- Make a list of improvements here...
+
 ### Deploying the site
 It would have been great if it would work perfectly, but of course it did not. 
 
