@@ -25,10 +25,10 @@ import Container from './components/layout/container/Container';
 function App() {
   return (
     <AuthProvider>
-      <Router>
+      <Router> 
+        
+        <Nav />
         <Container>
-          <Nav />
-
           <div>
             <Routes>
               <Route path="/" element={<PostsPage />} />

@@ -2,6 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 80%;
+    margin: 10px auto 30px;
   }
 
   .navigation img {
@@ -11,3 +13,9 @@
   .navigation a:hover {
     font-weight: 600;
   }
+
+@media screen and (max-width: 900px) {
+    .navigation {
+      width: 90%;
+    }
+}
