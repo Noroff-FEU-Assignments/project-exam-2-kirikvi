@@ -119,6 +119,24 @@ fieldset {
   color: var(--primary-colour);
 }
 
+.followButton {
+  background-color: var(--secondary-bg-colour);
+  color: var(--primary-colour);
+  border: none;
+  border-radius: 20px;
+  height: 40px;
+  padding: 5px 15px;
+  text-transform: capitalize;
+}
+
+.followButton:hover {
+  cursor: pointer;
+  background-color: var(--primary-colour);
+  color: var(--secondary-bg-colour);
+}
+
+
+
 @media screen and (max-width: 900px) {
   h2 {
     font-size: 1.1rem;

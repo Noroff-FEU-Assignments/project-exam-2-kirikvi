@@ -29,7 +29,7 @@ export default function FollowProfile() {
     }
 
     return (
-        <button type="button" onClick={handleFollow}>
+        <button className="followButton" type="button" onClick={handleFollow}>
             {error ? "Error" : "Follow"}
         </button>
     );

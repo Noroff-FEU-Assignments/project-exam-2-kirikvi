@@ -28,7 +28,7 @@ export default function UnfollowProfile() {
     }
 
     return (
-        <button type="button" onClick={handleUnfollow}>
+        <button className="followButton" type="button" onClick={handleUnfollow}>
             {error ? "Error" : "Unfollow"}
         </button>
     );
