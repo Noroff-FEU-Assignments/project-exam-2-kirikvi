@@ -39,7 +39,13 @@ I made a checklist on what to include in the design based off the "required user
 
 I browsed pinterest for inspiration, and I was also inspired by facebook's and instagram's simple design. 
 
-As experienced in earlier projects, the design changed a bit during the process, which is ok.
+As experienced in earlier projects, the design changed a bit during the process, which is ok. Some of the changes are:
+
+- The navigation is at the top of the site instead of the bottom on smaller screens.
+
+- You must click on the specific post to react or comment (I would change this if I had more time) instead of doing it on the main page.
+
+- I did not use the yellow colour from the style guide.
 
 ### Technical
 The technical part is still where I am struggling the most, so this project exam has given me a lot of challenges, which has been both fun and frustrating. 
@@ -90,3 +96,5 @@ TK. "Dropdown Menu - React Tutorial for Beginners" [Url (16.04.2023): https://ww
 TK. "Click Outside to Close - React Hook" [Url (16.04.2023): https://www.youtube.com/watch?v=HfZ7pdhS43s]
 
 useHooks. useLocalStorage. [Url: https://usehooks.com/useLocalStorage/]
+
+Pinterest [Url: https://no.pinterest.com/search/pins/?q=social%20media%20ux%20design&rs=typed]
