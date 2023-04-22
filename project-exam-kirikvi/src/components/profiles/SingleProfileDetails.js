@@ -71,11 +71,11 @@ export default function SingleProfileDetails() {
         <>
             <ProfileContainer>
                 <Banner>
-                    <img src={profile.banner}></img>
+                    <img src={profile.banner} alt={profile.banner}></img>
                 </Banner>
 
                 <Avatar>                
-                    <img src={profile.avatar}></img>
+                    <img src={profile.avatar} alt={profile.avatar}></img>
                 </Avatar>
 
                 <h2>{profile.name}</h2>

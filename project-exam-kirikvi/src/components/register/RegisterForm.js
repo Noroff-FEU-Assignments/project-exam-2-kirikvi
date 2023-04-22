@@ -58,31 +58,31 @@ export default function RegisterForm() {
                 
                 <fieldset disabled={submitting}>
                     <div>
-                        <label>Username</label>
-                        <input type="text" {...register("name")} />
+                        <label for="name">Username</label>
+                        <input name="name" type="text" {...register("name")} />
                         {errors.name && <FormError>{errors.name.message}</FormError>}
                     </div>
 
                     <div>
-                        <label>E-mail</label>
-                        <input type="email" {...register("email")} />
+                        <label for="email">E-mail</label>
+                        <input name="email" type="email" {...register("email")} />
                         {errors.email && <FormError>{errors.email.message}</FormError>}
                     </div>
 
                     <div>
-                        <label>Password</label>
-                        <input type="password" {...register("password")} />
+                        <label for="password">Password</label>
+                        <input name="password" type="password" {...register("password")} />
                         {errors.password && <FormError>{errors.password.message}</FormError>}
                     </div>
 
                     <div>
-                        <label>Avatar URL</label>
-                        <input type="text" {...register("avatar")} />
+                        <label for="avatar">Avatar URL</label>
+                        <input name="avatar" type="text" {...register("avatar")} />
                     </div>
 
                     <div>
-                        <label>Banner URL</label>
-                        <input type="text" {...register("banner")} />
+                        <label for="banner">Banner URL</label>
+                        <input name="banner" type="text" {...register("banner")} />
                     </div>
 
                     <Button>{submitting ? "Registers..." : "Register"}</Button>  

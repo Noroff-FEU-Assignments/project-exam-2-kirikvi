@@ -41,9 +41,8 @@ function App() {
               <Route exact path="/login" element={<LoginPage />} />
             </Routes>
           </div>
-
-          <Footer />
-          </Container>
+        </Container>
+        <Footer />
       </Router>
     </AuthProvider>
 

@@ -50,7 +50,7 @@ export default function CreatePost() {
     return (
         <>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <h3>Create post</h3>
+                <h2>Create post</h2>
 
                 {submitting && <div>The post was created</div>}    
 
@@ -58,19 +58,19 @@ export default function CreatePost() {
                 
                 <fieldset disabled={submitting}>
                     <div>
-                        <label>Title</label>
-                        <input type="text" {...register("title")} />
+                        <label for="title">Title</label>
+                        <input name="title" type="text" {...register("title")} />
                         {errors.title && <FormError>{errors.title.message}</FormError>}
                     </div>
 
                     <div>
-                        <label>Body</label>
-                        <textarea type="text" {...register("body")} />
+                        <label for="body">Body</label>
+                        <textarea name="body" type="text" {...register("body")} />
                     </div>
 
                     <div>
-                        <label>Add media url</label>
-                        <input type="text" {...register("media")} />
+                        <label for="media">Add media url</label>
+                        <input name="media" type="text" {...register("media")} />
                     </div>
 
                     <Button>{submitting ? "Publishing..." : "Publish"}</Button>    

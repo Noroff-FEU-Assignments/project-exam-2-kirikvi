@@ -88,9 +88,10 @@ export default function CommentOnPost() {
 
                 {commentError && <FormError>{commentError}</FormError>}
                
-                <p>Make a comment to this post</p>
+                
                 <fieldset disabled={commenting}>
                     <div>
+                        <label for="body">Make a comment to this post</label>
                         <textarea name="body" type="text" {...register("body")} />
                         {errors.body && <FormError>{errors.body.message}</FormError>}
                     </div>
