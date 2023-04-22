@@ -36,9 +36,11 @@ I don't know the name of the company, and did not want to spend too much time co
 I made a style guide and a prototype for mobile screens.
 
 ### Technical
-The technical part is still where I am struggling the most. I prefer to not use frameworks and do everything "from scratch", so I spent some time figuring out how to use react bootstrap for both content, functionality and styling. After encountering some problems with react bootstrap, I decided to only focus on getting all the content before trying to style anything.
+The technical part is still where I am struggling the most, so this project exam has given me a lot of challenges, which has been both fun and frustrating. 
 
-I wanted to implement all the required tasks on the user stories checklist before focusing on improwing the user experience and user flow.
+I wanted to implement all the required tasks on the user stories checklist before focusing on improwing the user experience and user flow. I believe this was a good decision, as I could spend the last couple of weeks improving the styling and user flow knowing the site had all required functions. 
+
+Coming up to the deadline, the site still has a lot of things I would improve, but I am pleased with what I have achieved so far.
 
 #### API
 I followed the Noroff lessons and Noroff API on how to get the access token when registering and logging in, and it was a huge relief when it finally worked. After that I spent a lot of time creating the different files and pages to get all the data and content.
@@ -65,6 +67,9 @@ I decided to go for CSS Modules for styling. I have not used CSS Modules before,
 I ran into some problems styling the forms and buttons. When adding styles the buttons and forms stopped working.
 
 I'm finding this way of styling quite difficult, because I need to make a lot of different files in different folders, and I am not mastering the art of making tidy folders and files. If time I will see if I can find a tutorial on how to do this better.
+
+### Deploying the site
+It would have been great if it would work perfectly, but of course it did not. 
 
 
 ## References
