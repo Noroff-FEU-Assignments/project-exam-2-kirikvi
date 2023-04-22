@@ -85,6 +85,7 @@ I'm finding this way of styling quite difficult, because I need to make a lot of
 - Tidying the files for unused functions and styling
 ### What I would improve
 If I had more time I would
+- User testing
 - Make a list of improvements here...
 
 ### Deploying the site

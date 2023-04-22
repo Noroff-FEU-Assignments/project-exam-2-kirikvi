@@ -7,9 +7,10 @@ import { useNavigate } from "react-router-dom";
 import FormError from "../common/FormError";
 import { API_BASE_URL, REGISTER_PATH} from "../../constants/api";
 import AuthContext from "../../context/AuthContext";
+
+//Styling
 import Button from "../forms/Button";
-//import Form from "../forms/Form";
-//import Input from "../forms/Input";
+import FormContainer from "../forms/FormContainer";
 
 const url = API_BASE_URL + REGISTER_PATH;
 
@@ -49,7 +50,8 @@ export default function RegisterForm() {
     }
 
     return (
-        <>
+        <FormContainer>
+            <h2>Register</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
 
                 {registerError && <FormError>{registerError}</FormError>}
@@ -86,6 +88,6 @@ export default function RegisterForm() {
                     <Button>{submitting ? "Registers..." : "Register"}</Button>  
                 </fieldset>    
             </form>
-        </>
+        </FormContainer>
     );
 }
