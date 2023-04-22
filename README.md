@@ -1,8 +1,29 @@
 # projectExam
  
 ## Setting up and running the project
+This project is created with create-react-app. https://create-react-app.dev/
+
+To start the project locally, write "npm start" in the terminal.
 
 ## Special instructions
+You have to register to be able to login and get access to the social media content. 
+
+### Registering
+You must register with a "@stud.noroff.no" or "@noroff.no" email. For example: "my_username@stud.noroff.no".
+
+### Logging in
+After successfully registering you may now log in. 
+
+### Create, update and delete post
+After logging in you may create a post. To edit or delete a post you have created, click on the single post. You will see three dots in the top right corner. Click on them to display the "update or delete"-form.
+
+### Comment on post
+To make a comment on a post, click on the post you want to comment. This will display the specific post, and you can write a comment below the post.
+
+### Updating the avatar and banner
+Click on your profile picture in the navigation to go to your user profile. You will see three dots in the top right corner. Click on them to display the "update"-form.
+
+If you want to delete the avatar and/or banner, simply remove the URL in the form and click "update".
 
 ## Report
 ### Project planning and management
