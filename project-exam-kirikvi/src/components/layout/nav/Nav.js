@@ -4,11 +4,12 @@ import AuthContext from "../../../context/AuthContext";
 import Navigation from "./Navigation";
 import ProfileImage from "./ProfileImage";
 //import LogoutButton from "../../login/LogoutButton";
+import Logo from "./Logo";
 
 //ICONS & LOGO
 import home from "../../../icons/home.png";
 import profile from "../../../icons/profile.png";
-import logo from "../../../logo/SocializeLogo.png";
+
 
 function Nav() {
     const [auth, setAuth] = useContext(AuthContext);
@@ -22,7 +23,7 @@ function Nav() {
 
     return (
         <Navigation>
-            <NavLink to="/"><img alt="socialize logo" src={logo}/></NavLink>
+            <Logo />
              {auth ? (
                 <>
                     <NavLink to="/postsbyfollowing"><img alt="home icon" src={home}/></NavLink>

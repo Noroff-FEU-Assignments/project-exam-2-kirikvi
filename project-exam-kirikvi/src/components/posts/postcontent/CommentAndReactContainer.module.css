@@ -5,7 +5,7 @@
 }
 
 .commentAndReactContainer button {
-    background-color: #fefefe;
+    background-color: var(--primary-bg-colour);
     border: none;
     height: 30px;
     text-align: left;

@@ -1,10 +1,9 @@
 .postContainer {
     display: flex;
     flex-direction: column;
-    color: #161616;
+    color: var(--primary-text-colour);
     margin: 70px 0;
 }
-
 
 .postContainer h3,
 .postContainer p {

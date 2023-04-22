@@ -37,6 +37,18 @@ export default function AllPostsByProfile() {
         return <div>Error: An error occured</div>;
     }
 
+    console.log(posts);
+
+    //Display a message if the profile has no posts.
+    if (posts.length === 0) {
+        return (
+            <div>
+                <hr></hr>
+                <p>This user has not posted anything yet</p>
+            </div>
+            )
+    }
+
     return (
         <div>
             {posts.map(function (post) {

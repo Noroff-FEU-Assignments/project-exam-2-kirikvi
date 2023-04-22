@@ -1,6 +1,6 @@
 .followButton {
-    background-color: #f5f5f5;
-    color: #4F42FB;
+    background-color: var(--secondary-bg-colour);
+    color: var(--primary-colour);
     border: none;
     border-radius: 20px;
     height: 40px;
@@ -10,6 +10,6 @@
 
 .followButton:hover {
     cursor: pointer;
-    background-color: #4F42FB;
-    color: #f5f5f5;
+    background-color: var(--primary-colour);
+    color: var(--secondary-bg-colour);
 }

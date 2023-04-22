@@ -5,6 +5,7 @@ import {
   Route
 } from 'react-router-dom';
 import Nav from './components/layout/nav/Nav';
+import Footer from './components/layout/footer/Footer';
 import { AuthProvider } from './context/AuthContext';
 
 //Route paths
@@ -40,6 +41,8 @@ function App() {
               <Route exact path="/login" element={<LoginPage />} />
             </Routes>
           </div>
+
+          <Footer />
           </Container>
       </Router>
     </AuthProvider>

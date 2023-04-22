@@ -1,10 +1,12 @@
 .container {
     max-width: 55%;
     margin: auto;
+    min-height: 100vh;
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 900px) {
     .container {
         max-width: 90%;
+        
     }
 }

@@ -5,5 +5,5 @@
 }
 
 .logoutButton:hover {
-    color: #4F42FB;
+    color: var(--primary-colour);
 }

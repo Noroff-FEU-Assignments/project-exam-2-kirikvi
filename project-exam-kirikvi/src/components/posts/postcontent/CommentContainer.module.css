@@ -1,7 +1,7 @@
 .commentContainer {
     display: flex;
     flex-direction: column;
-    background-color: #f3f3f3;
+    background-color: var(--secondary-bg-colour);
     border-radius: 20px;
     padding: 10px;
     margin: 20px 0;
