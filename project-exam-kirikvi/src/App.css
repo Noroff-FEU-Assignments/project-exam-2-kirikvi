@@ -63,20 +63,18 @@ fieldset {
 
 .menuTrigger img {
   position: absolute;
-  top: 60px;
-  right: 30px;
+  top: 0px;
+  right: 0px;
   width: 30px;
   overflow: hidden;
   cursor: pointer;
-  float: right;
   z-index: 100;
 }
 
 .dropdownMenu {
   position: absolute;
-  top: 50px;
+  top: 0px;
   width: 100%;
-  left: -20px;
   background-color: var(--primary-bg-colour);
   height: 100%;
   z-index: 10;
