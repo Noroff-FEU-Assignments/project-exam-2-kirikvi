@@ -1,7 +1,7 @@
 # projectExam
  
 ## Setting up and running the project
-This project is created with create-react-app. https://create-react-app.dev/
+This project is created with create-react-app. To install CRA, see the documentation here https://create-react-app.dev/
 
 To start the project locally, write "npm start" in the terminal.
 
@@ -23,17 +23,23 @@ To make a comment on a post, click on the post you want to comment. This will di
 ### Updating the avatar and banner
 Click on your profile picture in the navigation to go to your user profile. You will see three dots in the top right corner. Click on them to display the "update"-form.
 
-If you want to delete the avatar and/or banner, simply remove the URL in the form and click "update".
+If you want to delete the avatar and/or banner, simply remove the URL in the form and click "upload media".
 
 ## Report
 ### Project planning and management
 I started out by making a Kanban board using trello.com. This gave me a detailed view of what needs to be done. After that I made a Gantt chart using clickup.com to see how much time I had on each task.
 ### Design
-Since I don't know what the target group is, I wanted to keep the design minimalistic, clean and "fit for all". I chose the colours because "colour psychology" blue, purple, white, yellow.
+Since I did't know what the target group was, I wanted to keep the design minimalistic, clean and "fit for all". I chose the colours because "colour psychology" blue, purple, white, yellow.
 
 I don't know the name of the company, and did not want to spend too much time coming up with a name and logo, so I went with "socialize" and created a simple logo and favicon using the font "omnes" that I chose for the whole design on the website.
 
 I made a style guide and a prototype for mobile screens.
+
+I made a checklist on what to include in the design based off the "required user stories" in the project's read me file. This was a good way to know what I had to have in mind when designing all the different pages of the application. 
+
+I browsed pinterest for inspiration, and I was also inspired by facebook's and instagram's simple design. 
+
+As experienced in earlier projects, the design changed a bit during the process, which is ok.
 
 ### Technical
 The technical part is still where I am struggling the most, so this project exam has given me a lot of challenges, which has been both fun and frustrating. 
