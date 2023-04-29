@@ -12,6 +12,7 @@
 
   .navigation a:hover {
     font-weight: 600;
+    border-bottom: 2px solid var(--secondary-colour);
   }
 
 @media screen and (max-width: 900px) {

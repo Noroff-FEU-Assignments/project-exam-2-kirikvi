@@ -4,7 +4,7 @@
   --primary-colour: #4F42FB;
   --secondary-colour: #e3e1ff;
   --secondary-bg-colour: #f5f5f5;
-  --font-family: "omnes-pro", sans-serif;
+  --font-primary: "omnes-pro", sans-serif;
   --speed: 500ms;
 }
 
@@ -13,7 +13,7 @@
 }
 
 html {
-  font-family: var(--font-family);
+  font-family: var(--font-primary);
   background-color: var(--primary-bg-colour);
   color: var(--primary-text-colour);
 }
@@ -30,6 +30,7 @@ button:hover {
 input, 
 textarea {
   border: none;
+  font-family: var(--font-primary);
   background-color: var(--primary-bg-colour);
   border-bottom: 2px solid var(--secondary-colour);
   margin-bottom: 5px;
@@ -49,50 +50,17 @@ textarea {
   resize: none;
 }
 
-/*Temporary styling to make it easier to see the page content*/
 fieldset {
   border: none;
   margin: 0;
   padding: 0;
 }
 
+
+/*Temporary styling to make it easier to see the page content*/
 .updateImg {
   height: 80px;
   overflow: hidden;
-}
-
-.menuTrigger img {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 30px;
-  overflow: hidden;
-  cursor: pointer;
-  z-index: 100;
-}
-
-.dropdownMenu {
-  position: absolute;
-  top: 0px;
-  width: 100%;
-  background-color: var(--primary-bg-colour);
-  height: 100%;
-  z-index: 10;
-}
-
-.dropdownMenu.active {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  transition: var(--speed) ease;
-}
-
-.dropdownMenu.inactive {
-  opacity: 0;
-  height: 0;
-  visibility: hidden;
-  transform: translateY(-20px);
-  transition: var(--speed) ease;
 }
 
 .updateImage {
@@ -133,6 +101,42 @@ fieldset {
   color: var(--secondary-bg-colour);
 }
 
+/*DROPDOWN*/
+.menuTrigger img {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 100;
+  background-color: var(--primary-bg-colour);
+  border-radius: 100px;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  background-color: var(--primary-bg-colour);
+  height: 100%;
+  z-index: 10;
+}
+
+.dropdownMenu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: var(--speed) ease;
+}
+
+.dropdownMenu.inactive {
+  opacity: 0;
+  height: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: var(--speed) ease;
+}
 
 
 @media screen and (max-width: 900px) {

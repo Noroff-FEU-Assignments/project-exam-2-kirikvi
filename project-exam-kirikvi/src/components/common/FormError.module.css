@@ -1,0 +1,7 @@
+.formError {
+    background-color: var(--secondary-colour);
+    display: inline;
+    padding: 2px;
+    margin-left: 5px;
+    font-size: 0.75rem;
+}

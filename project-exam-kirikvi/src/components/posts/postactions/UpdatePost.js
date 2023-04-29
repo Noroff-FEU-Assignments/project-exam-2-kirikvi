@@ -59,20 +59,16 @@ export default function UpdatePost() {
         setUpdateError(null);
         setUpdated(false);
 
-        //console.log(data);
-
         if(data.tags === "") {
             data.tags = [];
         }
         
         try{
             const response = await http.put(postURL, data);
-            //console.log("response", response.data);
             setUpdated(true);
             //refresh the page after updating the post
             navigate(0);
         } catch (error) {
-            //console.log("error", error.message);
             setUpdateError(error.toString());
         } finally {
             setUpdatingPost(false);

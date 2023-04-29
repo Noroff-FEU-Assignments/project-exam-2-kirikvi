@@ -37,8 +37,6 @@ export default function GetComments() {
         return <div>Error: An error occured</div>;
     }
 
-    console.log(comments);
-
     return (
         <div>
             {comments.comments.map(function (comment) {

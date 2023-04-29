@@ -55,8 +55,6 @@ export default function UploadProfileMedia() {
         setUploadError(null);
         setUploaded(false);
 
-        console.log(data);
-
         try {
             const response = await http.put(mediaURL, data);
             setUploaded(true);

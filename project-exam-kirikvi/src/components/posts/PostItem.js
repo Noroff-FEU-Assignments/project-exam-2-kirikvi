@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
-import ReactToPost from "./postactions/ReactToPost";
 import PostContainer from "./postcontent/PostContainer";
 import PostHeader from "./postcontent/PostHeader";
 import CommentAndReactContainer from "./postcontent/CommentAndReactContainer";
@@ -8,6 +7,30 @@ export default function PostItem({ id, title, media, created, author, body, comm
 
     if (!author.avatar) {
         author.avatar = "https://static.vecteezy.com/system/resources/thumbnails/005/544/770/small/profile-icon-design-free-vector.jpg";
+    }
+
+    //Get the date and time from the "created" string
+    let date = created.slice(0,10);
+    let time = created.slice(11,16);
+
+    //distinction between singular "like" and plural "likes"
+    let likes = reactions.length;
+    let likesAmount = "";
+
+    if(likes === 1) {
+        likesAmount = likes + " like";
+    } else {
+        likesAmount = likes + " likes";
+    }
+
+    //distinction between singular "comment" and plural "comments"
+    let comment = comments.length;
+    let commentsAmount = "";
+
+    if(comment === 1) {
+        commentsAmount = comment + " comment";
+    } else {
+        commentsAmount = comment + " comments";
     }
 
     return (
@@ -19,7 +42,7 @@ export default function PostItem({ id, title, media, created, author, body, comm
 
                     <div>
                         <h2>{author.name}</h2>
-                        <small>{created}</small>
+                        <small>{date} @ {time} </small>
                     </div>   
                 </PostHeader>
                 </NavLink>
@@ -31,9 +54,8 @@ export default function PostItem({ id, title, media, created, author, body, comm
                 </NavLink>
                 
                 <CommentAndReactContainer>    
-                    <ReactToPost />
-                    <p>{reactions.length} likes</p>               
-                    <p>{comments.length} comments</p>
+                    <p>{likesAmount}</p>               
+                    <p>{commentsAmount}</p>
                 </CommentAndReactContainer>
             </PostContainer>
         </>    

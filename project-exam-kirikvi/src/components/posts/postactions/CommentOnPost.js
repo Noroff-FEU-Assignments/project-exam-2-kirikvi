@@ -39,11 +39,8 @@ export default function CommentOnPost() {
         function() {
             async function getPost() {
                 try{
-                    const response = await http.get(postURL);
-                    console.log("response", response.data);
-                    setPost(response.data);
+                    const response = await http.get(postURL);                    setPost(response.data);
                 } catch (error) {
-                    console.log(error);
                     setFetchError(error.toString());
                 } finally {
                     setFetchingPost(false);
@@ -59,17 +56,13 @@ export default function CommentOnPost() {
         setCommenting(true);
         setCommentError(null);
         setCommented(false);
-
-        console.log(data);
         
         try{
             const response = await http.post(commentURL, data);
-            console.log("response", response.data);
             setCommented(true);
             //refresh the page after commenting the post
             navigate(0);
         } catch (error) {
-            console.log("error", error);
             setCommentError(error.toString());
         } finally {
             setCommenting(false);

@@ -8,6 +8,11 @@
     margin: 0;
 }
 
+small {
+    padding-right: 7px;
+    font-size: 0.7rem;
+}
+
 .postHeader img {
     height: 70px;
     width: 70px;

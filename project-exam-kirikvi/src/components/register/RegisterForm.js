@@ -16,7 +16,7 @@ const url = API_BASE_URL + REGISTER_PATH;
 
 const schema = yup.object().shape({
   name: yup.string().required("Please enter a username"),
-  email: yup.string().required("Please enter your email"),
+  email: yup.string().required("Please enter your noroff email"),
   password: yup.string().required("Please enter your password").min(8, "Must be at least 8 characters"),
   avatar: yup.string().notRequired(),
   banner: yup.string().notRequired(),
@@ -51,7 +51,7 @@ export default function RegisterForm() {
 
     return (
         <FormContainer>
-            <h2>Register</h2>
+            <h2>Register to start socializing</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
 
                 {registerError && <FormError>{registerError}</FormError>}
@@ -59,20 +59,20 @@ export default function RegisterForm() {
                 <fieldset disabled={submitting}>
                     <div>
                         <label for="name">Username</label>
-                        <input name="name" type="text" {...register("name")} />
                         {errors.name && <FormError>{errors.name.message}</FormError>}
+                        <input name="name" type="text" {...register("name")} />
                     </div>
 
                     <div>
                         <label for="email">E-mail</label>
-                        <input name="email" type="email" {...register("email")} />
                         {errors.email && <FormError>{errors.email.message}</FormError>}
+                        <input name="email" type="email" {...register("email")} />
                     </div>
 
                     <div>
                         <label for="password">Password</label>
-                        <input name="password" type="password" {...register("password")} />
                         {errors.password && <FormError>{errors.password.message}</FormError>}
+                        <input name="password" type="password" {...register("password")} />
                     </div>
 
                     <div>

@@ -15,7 +15,6 @@ export default function PostsByFollowing() {
         async function getPosts() {
             try {
                 const response = await http.get(postsURL);
-                //console.log("response", response.data);
                 setPosts(response.data);
             } catch (error) {
                 setError(error.toString());

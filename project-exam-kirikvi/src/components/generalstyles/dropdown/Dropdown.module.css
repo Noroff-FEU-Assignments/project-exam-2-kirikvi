@@ -1,0 +1,33 @@
+.menuTrigger img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 100;
+}
+  
+.dropdownMenu {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    background-color: var(--primary-bg-colour);
+    height: 100%;
+    z-index: 10;
+}
+  
+.dropdownMenu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: var(--speed) ease;
+}
+  
+.dropdownMenu.inactive {
+    opacity: 0;
+    height: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: var(--speed) ease;
+}

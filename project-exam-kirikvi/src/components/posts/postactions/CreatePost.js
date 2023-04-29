@@ -36,11 +36,9 @@ export default function CreatePost() {
         
         try{
             const response = await http.post(url, data);
-            console.log("response", response.data);
             //refresh the page
             navigate(0);
         } catch (error) {
-            console.log("error", error.message);
             setError(error.toString());
         } finally {
             setSubmitting(false);

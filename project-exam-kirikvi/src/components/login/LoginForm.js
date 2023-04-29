@@ -37,11 +37,9 @@ export default function LoginForm() {
         
         try {
             const response = await axios.post(url, data);
-            console.log("response", response.data);
             setAuth(response.data);
             navigate("/");
         } catch (error) {
-            console.log("error", error);
             setLoginError(error.toString());
         } finally {
             setSubmitting(false);
@@ -50,7 +48,7 @@ export default function LoginForm() {
 
     return (
         <FormContainer>
-            <h2>Login</h2>
+            <h2>Log in to start socializing</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
 
                 {loginError && <FormError>{loginError}</FormError>}
@@ -59,14 +57,14 @@ export default function LoginForm() {
                     
                     <div>
                         <label>Email</label>
-                        <input {...register("email")} />
                         {errors.email && <FormError>{errors.email.message}</FormError>}
+                        <input {...register("email")} /> 
                     </div>
 
                     <div>
                         <label>Password</label>
-                        <input type="password" {...register("password")} />
                         {errors.password && <FormError>{errors.password.message}</FormError>}
+                        <input type="password" {...register("password")} />
                     </div>
 
                     <Button>{submitting ? "Logging in..." : "Login"}</Button>    

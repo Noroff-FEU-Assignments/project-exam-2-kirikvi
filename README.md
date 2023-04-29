@@ -27,25 +27,24 @@ If you want to delete the avatar and/or banner, simply remove the URL in the for
 
 ## Report
 ### Project planning and management
-I started out by making a Kanban board using trello.com. This gave me a detailed view of what needs to be done. After that I made a Gantt chart using clickup.com to see how much time I had on each task.
+I started out by making a Kanban board using trello.com. This gave me a detailed view of what needs to be done. After that I made a Gantt chart using clickup.com to see how much time I had on each task. I have been using the Trello/Kanban board the most, as I find it clearer and simpler to use. I understand that I could have added more checkpoints and lists to both charts, especially if I were to work in a team, but it worked fine for me now as I have been working alone with this project exam.
 ### Design
 Since I did't know what the target group was, I wanted to keep the design minimalistic, clean and "fit for all". I chose the colours because "colour psychology" blue, purple, white, yellow.
 
-I don't know the name of the company, and did not want to spend too much time coming up with a name and logo, so I went with "socialize" and created a simple logo and favicon using the font "omnes" that I chose for the whole design on the website.
+I don't know the name of the company, and did not want to spend too much time coming up with a name and logo, so I went with "socialize" and created a simple logo and favicon using the font "omnes" that I chose for the whole design on the website. I know that I should have at least three different fonts, but for this minimalistic application I wanted to go for the omnes font in different weights instead.
 
-I made a style guide and a prototype for mobile screens.
+I made a checklist on what to include in the design based off the "required user stories" in the project's read me file. This was a good way to know what I had to have in mind when designing all the different pages of the application. Considering this, I made a style guide and a prototype for mobile screens. 
 
-I made a checklist on what to include in the design based off the "required user stories" in the project's read me file. This was a good way to know what I had to have in mind when designing all the different pages of the application. 
+I made a few navigation icons in adobe illustrator, and made sure the icons had the same thickness, width and height for consistency.
 
 I browsed pinterest for inspiration, and I was also inspired by facebook's and instagram's simple design. 
 
 As experienced in earlier projects, the design changed a bit during the process, which is ok. Some of the changes are:
 
 - The navigation is at the top of the site instead of the bottom on smaller screens.
-
 - You must click on the specific post to react or comment (I would change this if I had more time) instead of doing it on the main page.
-
 - I did not use the yellow colour from the style guide.
+- The banner on the profile pages does not stretch across the full screen width, but remains the same width as the page layout width.
 
 ### Technical
 The technical part is still where I am struggling the most, so this project exam has given me a lot of challenges, which has been both fun and frustrating. 
@@ -80,17 +79,21 @@ I ran into some problems styling the forms and buttons. When adding styles the b
 
 I'm finding this way of styling quite difficult, because I need to make a lot of different files in different folders, and I am not mastering the art of making tidy folders and files. If time I will see if I can find a tutorial on how to do this better.
 
+#### Unsplash images
+I have used images on unsplash.com as media sources for the avatar, banner and post media.
+
+### Deploying the site
+It would have been great if it would work perfectly, but of course it did not. I read the documentation on how to deploy a react app to both github pages and netlify, but it did not work.
+
 ### Last finishes
 - Removing the console.logs
 - Tidying the files for unused functions and styling
 ### What I would improve
 If I had more time I would
 - User testing
-- Make a list of improvements here...
-
-### Deploying the site
-It would have been great if it would work perfectly, but of course it did not. 
-
+- Make a single follow/unfollow button instead of having one of each
+- Letting the user react and comment to a post on the main feed (and not having to click on the specific post first)
+- Wathcing more CSS modules tutorials to get a better understanding of it, and to make more reusable styles.
 
 ## References
 Noroff Lessons

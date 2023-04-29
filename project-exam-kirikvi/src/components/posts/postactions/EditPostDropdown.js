@@ -3,9 +3,7 @@ import React, {useEffect, useRef, useState } from "react";
 import UpdatePost from "./UpdatePost";
 
 export default function EditPostDropdown() {
-
     const [open, setOpen ] = useState(false);
-
     
     //Lets the user close the dropdown update/delete form when clicking anywhere outside the form.
     let menuRef = useRef();
