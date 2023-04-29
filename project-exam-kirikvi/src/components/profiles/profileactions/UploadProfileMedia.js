@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -6,6 +6,8 @@ import FormError from "../../common/FormError";
 import useAxios from "../../../hooks/useAxios";
 import { API_BASE_URL, PROFILES_PATH } from "../../../constants/api";
 import Button from "../../forms/Button";
+import { useNavigate } from "react-router-dom";
+import AuthContext from "../../../context/AuthContext";
 
 const schema = yup.object().shape({
     avatar: yup.string().notRequired(),
@@ -24,9 +26,15 @@ export default function UploadProfileMedia() {
         resolver: yupResolver(schema),
     });  
 
+    const [auth, setAuth] = useContext(AuthContext);
+
+    const username = auth.name;
+
     const http = useAxios();
 
-    const url =  API_BASE_URL + PROFILES_PATH + "/" + "kiri_kvistnes";
+    const navigate = useNavigate();
+
+    const url =  API_BASE_URL + PROFILES_PATH + "/" + username;
 
     const mediaURL = url + "/media";
 
@@ -58,6 +66,7 @@ export default function UploadProfileMedia() {
         try {
             const response = await http.put(mediaURL, data);
             setUploaded(true);
+            navigate(0);
         } catch (error) {
             setUploadError(error.toString());
         } finally {
