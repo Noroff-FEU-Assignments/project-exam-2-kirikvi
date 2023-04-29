@@ -87,7 +87,7 @@ It would have been great if it would work perfectly, but of course it did not. I
 
 I found a very helpful video by Code With Arjun on YouTube. After following along it finally worked. Yay!
 
-I encountered a few errors on the hosted demo which works perfectly on my local host. When trying to comment or like a post or trying to follow another user, I get a 404 "Page not found" error message telling me that the URL does not exist. I am not sure why it does not work, but I will try to figure it out these last days. 
+I encountered a few errors on the hosted demo which works perfectly on my local host. When trying to comment or like a post or trying to follow another user, I get a 404 "Page not found" error message telling me that the URL does not exist, but when updating the page and going to that specific post or profile you can tell that the comment was published or the user was followed. I am not sure why it does not work as it should, but I will try to figure it out these last days. 
 
 ### Last finishes
 - Removing the console.logs
