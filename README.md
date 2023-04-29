@@ -1,5 +1,5 @@
-# projectExam
- 
+# Project Exam 2
+
 ## Setting up and running the project
 This project is created with create-react-app. To install CRA, see the documentation here https://create-react-app.dev/
 
