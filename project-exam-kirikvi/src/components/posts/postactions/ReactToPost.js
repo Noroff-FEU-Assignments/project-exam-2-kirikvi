@@ -18,7 +18,7 @@ export default function ReactToPost() {
     async function handleLike() {
             try {
                 await http.put(reactURL);
-                //navigate(0);
+                navigate(0);
             } catch (error) {
                 setError(error);
             }
