@@ -82,8 +82,12 @@ I'm finding this way of styling quite difficult, because I need to make a lot of
 #### Unsplash images
 I have used images on unsplash.com as media sources for the avatar, banner and post media.
 
-### Deploying the site
+### Deploying the site to Netlify
 It would have been great if it would work perfectly, but of course it did not. I read the documentation on how to deploy a react app to both github pages and netlify, but it did not work.
+
+I found a very helpful video by Code With Arjun on YouTube. After following along it finally worked. Yay!
+
+I encountered a few errors on the hosted demo which works perfectly on my local host. When trying to comment or like a post or trying to follow another user, I get a 404 "Page not found" error message telling me that the URL does not exist. I am not sure why it does not work, but I will try to figure it out these last days. 
 
 ### Last finishes
 - Removing the console.logs
@@ -109,3 +113,5 @@ TK. "Click Outside to Close - React Hook" [Url (16.04.2023): https://www.youtube
 useHooks. useLocalStorage. [Url: https://usehooks.com/useLocalStorage/]
 
 Pinterest [Url: https://no.pinterest.com/search/pins/?q=social%20media%20ux%20design&rs=typed]
+
+Code with Arjun. "Deploy React Application using Netlify|Deploy manually using build folder" [URL (29.04.2023):"https://www.youtube.com/watch?v=tVzpC5_AC8M ]
