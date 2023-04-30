@@ -98,7 +98,6 @@ I encountered a few errors on the hosted demo which works perfectly on my local 
 - Tidying the files for unused functions and styling
 ### What I would improve
 If I had more time I would
-- User testing
 - Make a single follow/unfollow button instead of having one of each
 - Letting the user react and comment to a post on the main feed (and not having to click on the specific post first)
 - Wathcing more CSS modules tutorials to get a better understanding of it, and to make more reusable styles.
@@ -107,6 +106,8 @@ If I had more time I would
 - Adobe Illustrator
 - Adobe Xd
 - Code with Arjun. "Deploy React Application using Netlify|Deploy manually using build folder" [URL (29.04.2023):"https://www.youtube.com/watch?v=tVzpC5_AC8M ]
+- facebook.com (for inspiration)
+- instagram.com (for inspiration)
 - Kadavy, D (2011). "Design <for> Hackers /*reverse-engineering beauty*/ (p.249).
 - Noroff Lessons
 - Noroff API Documentation
