@@ -104,7 +104,8 @@ If I had more time I would
 - Wathcing more CSS modules tutorials to get a better understanding of it, and to make more reusable styles.
 
 ## References
-
+- Adobe Illustrator
+- Adobe Xd
 - Code with Arjun. "Deploy React Application using Netlify|Deploy manually using build folder" [URL (29.04.2023):"https://www.youtube.com/watch?v=tVzpC5_AC8M ]
 - Kadavy, D (2011). "Design <for> Hackers /*reverse-engineering beauty*/ (p.249).
 - Noroff Lessons
