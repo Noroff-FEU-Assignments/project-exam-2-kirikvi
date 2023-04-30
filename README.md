@@ -27,9 +27,13 @@ If you want to delete the avatar and/or banner, simply remove the URL in the for
 
 ## Report
 ### Project planning and management
-I started out by making a Kanban board using trello.com. This gave me a detailed view of what needs to be done. After that I made a Gantt chart using clickup.com to see how much time I had on each task. I have been using the Trello/Kanban board the most, as I find it clearer and simpler to use. I understand that I could have added more checkpoints and lists to both charts, especially if I were to work in a team, but it worked fine for me now as I have been working alone with this project exam.
+I started out by making a Kanban board using trello.com. This gave me a detailed view of what needs to be done. After that I made a Gantt chart using clickup.com to see how much time I had on each task. I made a new Gantt chart using Github projects, but I did not find it very intuitive to use. It was shutting down and giving me error messages each time I wanted to add a new item/task, and even if I set the access to public it still wasnt accessable for everyone. I decided to not use extra time on this as I wanted to work on the social media app instead.
+
+I have been using the Trello/Kanban board the most, as I find it clearer and simpler to use. I understand that I could have added more checkpoints and lists to both charts, especially if I were to work in a team, but it worked fine for me now as I have been working alone with this project exam.
 ### Design
-Since I did't know what the target group was, I wanted to keep the design minimalistic, clean and "fit for all". I chose the colours because "colour psychology" blue, purple, white, yellow.
+Since I did't know what the target group was, I wanted to keep the design minimalistic, clean and "fit for all". I wanted an almost white background and an almost black primary text colour to provide good contrast for reading (Kadavy, D. p.249). 
+
+I chose the colour pallette because I wanted to give the user the feeling of trust, stability, professionalism and wisdom. Both blue and purple is associated with these "feelings", and I went with a blue/purple colour in different tints (Pixel77.com, 2011). The colour yellow is an attention grabber and can make the user curios, so I wanted to have a yellow colour in the colour pallette, but I did not implement it in the finished design.
 
 I don't know the name of the company, and did not want to spend too much time coming up with a name and logo, so I went with "socialize" and created a simple logo and favicon using the font "omnes" that I chose for the whole design on the website. I know that I should have at least three different fonts, but for this minimalistic application I wanted to go for the omnes font in different weights instead.
 
@@ -100,18 +104,16 @@ If I had more time I would
 - Wathcing more CSS modules tutorials to get a better understanding of it, and to make more reusable styles.
 
 ## References
-Noroff Lessons
 
-Noroff API Documentation
+- Code with Arjun. "Deploy React Application using Netlify|Deploy manually using build folder" [URL (29.04.2023):"https://www.youtube.com/watch?v=tVzpC5_AC8M ]
+- Kadavy, D (2011). "Design <for> Hackers /*reverse-engineering beauty*/ (p.249).
+- Noroff Lessons
+- Noroff API Documentation
+- Noroff Discord Forum
+- Pinterest [Url: https://no.pinterest.com/search/pins/?q=social%20media%20ux%20design&rs=typed]
+- Pixel77(2011) "Color Psychology in Web Design - Big Websites Case Studies". [Url: (30.04.2023): https://pixel77.com/color-psychology-web-design-color-schemes-big-websites/]
+- TK. "Dropdown Menu - React Tutorial for Beginners" [Url (16.04.2023): https://www.youtube.com/watch?v=KROfo7vuIGY]
+- TK. "Click Outside to Close - React Hook" [Url (16.04.2023): https://www.youtube.com/watch?v=HfZ7pdhS43s]
+- unsplash.com 
+- useHooks. useLocalStorage. [Url: https://usehooks.com/useLocalStorage/]
 
-Noroff Discord Forum
-
-TK. "Dropdown Menu - React Tutorial for Beginners" [Url (16.04.2023): https://www.youtube.com/watch?v=KROfo7vuIGY]
-
-TK. "Click Outside to Close - React Hook" [Url (16.04.2023): https://www.youtube.com/watch?v=HfZ7pdhS43s]
-
-useHooks. useLocalStorage. [Url: https://usehooks.com/useLocalStorage/]
-
-Pinterest [Url: https://no.pinterest.com/search/pins/?q=social%20media%20ux%20design&rs=typed]
-
-Code with Arjun. "Deploy React Application using Netlify|Deploy manually using build folder" [URL (29.04.2023):"https://www.youtube.com/watch?v=tVzpC5_AC8M ]
