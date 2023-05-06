@@ -27,7 +27,7 @@ If you want to delete the avatar and/or banner, simply remove the URL in the for
 
 ## Report
 ### Project planning and management
-I started out by making a Kanban board using trello.com. This gave me a detailed view of what needs to be done. After that I made a Gantt chart using clickup.com to see how much time I had on each task. I made a new Gantt chart using Github projects, but I did not find it very intuitive to use. It was shutting down and giving me error messages each time I wanted to add a new item/task, and even if I set the access to public it still wasnt accessable for everyone. I decided to not use extra time on this as I wanted to work on the social media app instead.
+I started out by making a Kanban board using trello.com. This gave me a detailed view of what needs to be done. After that I made a Gantt chart using clickup.com to see how much time I had on each task. I made a new Gantt chart using Github projects, but I did not find it very intuitive to use. It was shutting down and giving me error messages each time I wanted to add a new item/task, and even if I set the access to public it still wasnt accessable for everyone. I found out that if I created drafts instead of issues, it was visible for other users.
 
 I have been using the Trello/Kanban board the most, as I find it clearer and simpler to use. I understand that I could have added more checkpoints and lists to both charts, especially if I were to work in a team, but it worked fine for me now as I have been working alone with this project exam.
 ### Design
@@ -91,7 +91,7 @@ It would have been great if it would work perfectly, but of course it did not. I
 
 I found a very helpful video by Code With Arjun on YouTube. After following along it finally worked. Yay!
 
-I encountered a few errors on the hosted demo which works perfectly on my local host. When trying to comment or like a post or trying to follow another user, I get a 404 "Page not found" error message telling me that the URL does not exist, but when updating the page and going to that specific post or profile you can tell that the comment was published or the user was followed. I am not sure why it does not work as it should, but I will try to figure it out these last days. 
+I encountered a few errors on the hosted demo which works perfectly on my local host. When trying to comment or like a post or trying to follow another user, I get a 404 "Page not found" error message telling me that the URL does not exist, but when updating the page and going to that specific post or profile you can tell that the comment was published or the user was followed. I am not sure why it does not work as it should, but I am afraid to make the code not working at all if I change it, so I'd rather leave it for now and hopefully get some feedback.
 
 ### Last finishes
 - Removing the console.logs
@@ -101,6 +101,7 @@ If I had more time I would
 - Make a single follow/unfollow button instead of having one of each
 - Letting the user react and comment to a post on the main feed (and not having to click on the specific post first)
 - Wathcing more CSS modules tutorials to get a better understanding of it, and to make more reusable styles.
+- Make a CSS module for the dropdown menus.
 
 ## References
 - Adobe Illustrator
