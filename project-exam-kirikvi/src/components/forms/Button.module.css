@@ -1,7 +1,7 @@
 .button {
-    background-color: #4F42FB;
+    background-color: var(--primary-colour);
     border-radius: 20px;
-    color: #f5f5f5;
+    color: var(--secondary-bg-colour);
     border: none;
     padding: 10px 15px;
     text-transform: capitalize;
@@ -11,6 +11,6 @@
 
 .button:hover {
     cursor: pointer;
-    background-color: #f5f5f5;
-    color: #4F42FB;
+    background-color: var(--secondary-bg-colour);
+    color: var(--primary-colour);
 }

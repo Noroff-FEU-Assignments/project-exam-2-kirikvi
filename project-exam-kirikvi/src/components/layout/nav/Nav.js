@@ -39,7 +39,9 @@ function Nav() {
                     <NavLink to="/login">Login </NavLink>
                 </>  
              )}
+           
         </Navigation>
+         
     );
 }
 

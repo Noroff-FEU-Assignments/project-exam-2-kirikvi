@@ -13,13 +13,19 @@
 }
 
 html {
-  font-family: var(--font-primary);
   background-color: var(--primary-bg-colour);
   color: var(--primary-text-colour);
 }
 
 h1 {
   display: none;
+}
+
+html,
+input, 
+textarea,
+button {
+  font-family: var(--font-primary);
 }
 
 a:hover,
@@ -30,7 +36,6 @@ button:hover {
 input, 
 textarea {
   border: none;
-  font-family: var(--font-primary);
   background-color: var(--primary-bg-colour);
   border-bottom: 2px solid var(--secondary-colour);
   margin-bottom: 5px;

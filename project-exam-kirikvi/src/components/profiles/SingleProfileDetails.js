@@ -10,7 +10,7 @@ import FollowProfile from "./profileactions/FollowProfile";
 import UnfollowProfile from "./profileactions/UnfollowProfile";
 import AllPostsByProfile from "../posts/AllPostsByProfile";
 import AuthContext from "../../context/AuthContext";
-
+import ReturnButton from "../returnbutton/ReturnButton";
 
 export default function SingleProfileDetails() {
     const [profile, setProfile] = useState([]);
@@ -69,10 +69,11 @@ export default function SingleProfileDetails() {
     return (
         <>
             <ProfileContainer>
+                
                 <Banner>
                     <img src={profile.banner} alt={profile.banner}></img>
                 </Banner>
-
+                <ReturnButton />
                 <Avatar>                
                     <img src={profile.avatar} alt={profile.avatar}></img>
                 </Avatar>

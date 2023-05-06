@@ -10,6 +10,7 @@ import GetComments from "./GetComments";
 import CommentAndReactContainer from "./postcontent/CommentAndReactContainer";
 import EditPostDropdown from "./postactions/EditPostDropdown";
 import AuthContext from "../../context/AuthContext";
+import ReturnButton from "../returnbutton/ReturnButton";
 
 export default function SinglePostDetails() {
     const [post, setPost] = useState([]);
@@ -88,6 +89,7 @@ export default function SinglePostDetails() {
         return (
             <div>
                 <PostContainer>
+                    <ReturnButton />
                     <NavLink to={`/profiles/${post.author.name}`}>
                         <PostHeader>
                             <img className="avatar" src={post.author.avatar} alt="avatar"></img>    
