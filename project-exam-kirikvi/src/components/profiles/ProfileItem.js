@@ -10,7 +10,8 @@ export default function ProfileItem({ name, avatar }) {
             <NavLink to={`/profiles/${name}`}>
                 <ProfileInfoContainer>
                     <img src={avatar} alt="Avatar"></img>
-                    <h2>{name}</h2>               
+                    <h2>{name}</h2> 
+                    <p className="followButton">See profile</p>              
                 </ProfileInfoContainer>
             </NavLink> 
         </>

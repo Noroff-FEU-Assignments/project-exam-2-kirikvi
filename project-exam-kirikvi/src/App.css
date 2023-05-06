@@ -57,7 +57,7 @@ fieldset {
 }
 
 
-/*Temporary styling to make it easier to see the page content*/
+/*Other styles*/
 .updateImg {
   height: 80px;
   overflow: hidden;
@@ -90,9 +90,8 @@ fieldset {
   color: var(--primary-colour);
   border: none;
   border-radius: 20px;
-  height: 40px;
+  height: 35px;
   padding: 5px 15px;
-  text-transform: capitalize;
 }
 
 .followButton:hover {

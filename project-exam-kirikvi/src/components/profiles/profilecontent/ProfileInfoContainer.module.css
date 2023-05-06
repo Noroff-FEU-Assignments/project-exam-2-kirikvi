@@ -1,7 +1,7 @@
 .profileInfoContainer {
     display: flex;
     padding: 10px;
-    justify-content: left;
+    justify-content: space-between;
     align-items: center;
     margin: 20px 0;
 }
@@ -11,7 +11,6 @@
     width: 60px;
     height: 60px;
     object-fit: cover;
-    margin-right: 50px;
 }
 
 a {
