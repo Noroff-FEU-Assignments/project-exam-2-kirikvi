@@ -59,6 +59,10 @@ Click on your profile picture in the navigation to go to your user profile. You 
 
 If you want to delete the avatar and/or banner, simply remove the URL in the form and click "upload media".
 
+## Contact
+www.kirikvistnes.no
+kirikvistnes@gmail.com
+
 ## Report
 ### Project planning and management
 I started out by making a Kanban board using trello.com. This gave me a detailed view of what needs to be done. After that I made a Gantt chart using clickup.com to see how much time I had on each task. I made a new Gantt chart using Github projects, but I did not find it very intuitive to use. It was shutting down and giving me error messages each time I wanted to add a new item/task, and even if I set the access to public it still wasnt accessable for everyone. I found out that if I created drafts instead of issues, it was visible for other users.
