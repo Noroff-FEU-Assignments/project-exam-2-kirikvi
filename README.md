@@ -1,9 +1,43 @@
 # Project Exam 2
+![Image)](https://github.com/Noroff-FEU-Assignments/project-exam-2-kirikvi/assets/71313020/fc97b634-3da2-4d24-810d-615767150794)
 
-## Setting up and running the project
+A school project exam to practice the skills learnt during the education.
+
+Demo site - https://socialize-demo.netlify.app/
+
+## Description
+The task was to create a brand new front end for a social media brand application. I was to plan, design and build a modern front end social media application using this API https://noroff-api-docs.netlify.app/social-endpoints/authentication.
+
+The client has specified the following requirements in the form of *User Stories*:
+1. A user with a `stud.noroff.no` email may register
+2. A registered user may login
+3. A registered user may update their avatar and banner
+4. A registered user may logout
+5. A registered user may view a list of `Posts`
+6. A registered user may view a list of `Profiles`
+7. A registered user may view a single `Post` by `id`
+8. A registered user may view a single `Profile` by `name`
+9. A registered user may create a `Post`
+10. A registered user may update a `Post` they own
+11. A registered user may delete a `Post` they own
+12. A registered user may create a `Comment` on any `Post`
+13. A registered user may `react` to any `Post` with an emoji
+14. A registered user may `follow` and `unfollow` another `Profile`
+
+## Built with
+- React
+- CSS modules
+
+## Getting started
+### Installing
 This project is created with create-react-app. To install CRA, see the documentation here https://create-react-app.dev/
 
+### Running
 To start the project locally, write "npm start" in the terminal.
+
+```
+npm start
+```
 
 ## Special instructions
 You have to register to be able to login and get access to the social media content. 
